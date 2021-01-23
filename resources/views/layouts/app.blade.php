@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>@yield('title')</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="{{asset('assets/img/logo/icono.svg')}}">
+        <!-- Fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+        <!-- Css-->
+        <link rel="stylesheet" href="{{asset('assets/css/animate.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/owl.theme.default.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/fontawesome-all.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/swiper.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/bootstrap-select.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/jarallax.css')}}">
+    
+        <link rel="stylesheet" href="{{asset('assets/css/jquery.mCustomScrollbar.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/bootstrap-datepicker.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/vegas.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/nouislider.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/nouislider.pips.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/tolips.css')}}">
+        <!-- Template styles -->
+        <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
+    
+    </head>
+<body>
+    <div class="preloader">
+        <img src="{{asset('assets/img/logo/logo.svg')}}" class="preloader__image" alt="">
+    </div><!-- /.preloader -->
+    <!-- ===============header ===================-->
+    <div class="site-header__header-one-wrap clearfix">
+        <!-- header-top-->
+        <div class="header_top_one">
+            <div class="container">
+                <div class="header_top_one_inner clearfix">
+                    <div class="header_top_one_logo_box float-left">
+                        <div class="header_top_one_logo">
+                            <a href="#"><img src="{{asset('assets/img/logo/logo.svg')}}" alt="" style="width: 165px"></a>
+                        </div>
+                    </div>
+                    <div class="header_top_one_content_box float-right">
+                        <div class="header_top_one_content_box_top clearfix">
+                            <div class="header_top_one_content_box_top_left float-left">
+                                <p>Medicexpress</p>
+                            </div>
+                            <div class="header_top_one_content_box_top_right float-right">
+                                <ul class="list-unstyled header_top_one_content_box_top_right_list">
+                                    <li><a href="#">Soporte<span>/</span></a></li>
+                                    <li><a href="#">Lista de deseos<span>/</span></a></li>
+                                    <li><a href="#">Mi cuenta</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header_top_one_content_box_bottom">
+                            <div class="header_top_one_content_box_bottom_inner clearfix">
+                                <div class="header_top_one_content_box_bottom__social_box">
+                                    <div class="header_top_one_content_box_bottom__social">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                                <div class="header_top_one_content_box_bottom_contact_info">
+                                    <ul class="header_top_one_content_box_bottom_contact_info_list list-unstyled">
+                                        <li>
+                                            <div class="icon">
+                                                <span class="icon-phone-call"></span>
+                                            </div>
+                                            <div class="text">
+                                                <p>Telefono</p>
+                                                <a href="tel:+593 969 665 037">+593 969 665 037</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <span class="icon-message"></span>
+                                            </div>
+                                            <div class="text">
+                                                <p>Correo</p>
+                                                <a href="mailto:servicioalcliente@medicexpress.com">servicioalcliente@medicexpress.com</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /header-top-->
+        <header class="main-nav__header-one">
+            <div class="container">
+                <nav class="header-navigation one stricky">
+                    <div class="container-box clearfix">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="main-nav__left main-nav__left_one float-left">
+                            <a href="#" class="side-menu__toggler">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                            <div class="main-nav__main-navigation one clearfix">
+                                <ul class=" main-nav__navigation-box float-left">
+                                    <li>
+                                        <a href="#">Inicio</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Quienes somos</a>
+                                        <ul>
+                                            <li><a href="#">Misión</a></li>
+                                            <li><a href="#">Visión</a></li>
+                                            <li><a href="#">Objetivos y principios</a></li>
+                                            <li><a href="#">Valores</a></li>
+                                        </ul><!-- /.sub-menu -->
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Servicios</a>
+                                        <ul>
+                                            <li><a href="#">Atención medica</a></li>
+                                            <li><a href="#">Salud ocupacional</a></li>
+                                            <li><a href="#">Consultorias</a></li>
+                                        </ul><!-- /.sub-menu -->
+                                    </li>
+                                    <li>
+                                        <a href="#">Blog</a>
+                                    </li>
+                                   
+                                    <li>
+                                        <a href="#">Contactenos</a>
+                                    </li>
+                                </ul>
+                            </div><!-- /.navbar-collapse -->
+                        </div>
+                        <div class="main-nav__right main-nav__right_one float-right">
+                            <div class="header_btn_1">
+                                <a href="#" class="thm-btn">Cotizar Ahora</a>
+                            </div>
+                            <!--<div class="icon_cart_box">
+                                <a href="#">
+                                    <span class="icon-shopping-cart"></span>
+                                </a>
+                            </div>
+                            <div class="icon_search_box">
+                                <a href="#" class="main-nav__search search-popup__toggler">
+                                    <i class="icon-magnifying-glass"></i>
+                                </a>
+                            </div>-->
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </div>
+    @yield('content')
+
+    <!--Site Footer One Start-->
+    <footer class="site_footer" style="background-image: url(assets/images/resources/site_footer_top_bg.jpg)">
+        <div class="container">
+            <div class="site_footer_one_top">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-6 wow fadeInUp" data-wow-delay="00ms">
+                        <div class="footer-widget__column footer_widget__about">
+                            <div class="footer_logo">
+                                <a href="#"><img src="{{asset('assets/img/logo/logo.svg')}}" alt="" style="background-color: #fff; width: 188px;"></a>
+                            </div>
+                            <div class="footer_widget_about_text">
+                                <p>Forjando juntos una intervención efectiva, eficiente y eficaz al 
+                                    compromiso de mejorar la calidad de vida y siguiendo las normativas vigentes 
+                                    establecidas a nivel Nacional.</p>
+                            </div>
+                            <div class="footer_call_agent_box">
+                                <div class="icon">
+                                    <span class="icon-phone-call"></span>
+                                </div>
+                                <div class="text">
+                                    <p>Telefono</p>
+                                    <a href="tel:+593 969 665 037">+593 969 665 037</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="footer-widget__column footer_widget__explore clearfix">
+                            <div class="footer-widget__title">
+                                <h3>Explorar</h3>
+                            </div>
+                            <ul class="footer_widget__explore_list list-unstyled">
+                                <li><a href="#">Sobre nosotros</a></li>
+                                <li><a href="#">Servicios</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contácto</a></li>
+                                <li><a href="#">Soporte</a></li>
+                            </ul>
+                            <!--<ul class="footer_widget__explore_list two list-unstyled">
+                                <li><a href="#">Our Agents</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>-->
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-8 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="footer-widget__column footer_widget__newsletter">
+                            <div class="footer-widget__title">
+                                <h3>Boletin informativo</h3>
+                            </div>
+                            <form action="#" class="footer_form">
+                                <div class="footer_input_box">
+                                    <input type="email" name="email" placeholder="Correo electronico">
+                                    <button type="submit" class="button" style="font-size: 14px">Suscribirse</button>
+                                </div>
+                            </form>
+                            <div class="footer_widget__newsletter_bottom">
+                                <p>Urdenor 1 MZ 139 EDIF. Citrino Ofc305</p>
+                                <a href="mailto:servicioalcliente@medicexpress.com">servicioalcliente@medicexpress.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Site Footer One End-->
+
+    <!-- =============scripts============ -->
+    <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+    <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('assets/js/waypoints.min.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.counterup.min.js')}}"></script>
+    <script src="{{asset('assets/js/TweenMax.min.js')}}"></script>
+    <script src="{{asset('assets/js/wow.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.ajaxchimp.min.js')}}"></script>
+    <script src="{{asset('assets/js/swiper.min.js')}}"></script>
+    <script src="{{asset('assets/js/typed-2.0.11.js')}}"></script>
+    <script src="{{asset('assets/js/vegas.min.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('assets/js/bootstrap-select.min.js')}}"></script>
+    <script src="{{asset('assets/js/countdown.min.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+    <script src="{{asset('assets/js/bootstrap-datepicker.min.js')}}"></script>
+    <script src="{{asset('assets/js/nouislider.min.js')}}"></script>
+    <script src="{{asset('assets/js/isotope.js')}}"></script>
+    <script src="{{asset('assets/js/appear.js')}}"></script>
+    <script src="{{asset('assets/js/jarallax.js')}}"></script>
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM"></script>
+
+    <!-- template scripts -->
+    <script src="{{asset('assets/js/theme.js')}}"></script>
+</body>
+</html>
