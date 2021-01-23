@@ -51,7 +51,7 @@
                     <div class="header_top_one_content_box float-right">
                         <div class="header_top_one_content_box_top clearfix">
                             <div class="header_top_one_content_box_top_left float-left">
-                                <p>Medicexpress</p>
+                                <p>Bienvenido a Medicexpress</p>
                             </div>
                             <div class="header_top_one_content_box_top_right float-right">
                                 <ul class="list-unstyled header_top_one_content_box_top_right_list">
@@ -161,7 +161,7 @@
         </header>
     </div>
     @yield('content')
-
+    
     <!--Site Footer One Start-->
     <footer class="site_footer" style="background-image: url(assets/images/resources/site_footer_top_bg.jpg)">
         <div class="container">
@@ -243,7 +243,6 @@
                         <div class="site_footer__social">
                             <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-facebook-square"></i></a>
-                            <a href="#"><i class="fab fa-dribbble"></i></a>
                             <a href="#"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
@@ -253,6 +252,12 @@
     </div>
     <!--Site Footer Bottom End-->
 </div>   
+    <!--==================whatsapp====================-->
+    <div class="btn-whatsapp scroll-to-target">
+        <a href="https://api.whatsapp.com/send?phone=+593 969 665 037" target="_blank">
+            <img src="http://s2.accesoperu.com/logos/btn_whatsapp.png" alt="" style="width: 60px">
+        </a>
+    </div>
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
     <!-- =============scripts============ -->

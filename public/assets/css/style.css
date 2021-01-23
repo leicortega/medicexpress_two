@@ -46,9 +46,9 @@ font-family: 'Inter', sans-serif;
 
 :root {
     --thm-font: 'Inter', sans-serif;
-    --thm-base: #4c7ce3;
+    --thm-base: #00a8d2;
     --thm-base-rgb: 76, 124, 227;
-    --thm-primary: #62cec5;
+    --thm-primary: #f84159;
     --thm-primary-rgb: 98, 206, 197;
     --thm-black: #282f44;
     --thm-black-rgb: 40, 47, 68;
@@ -3043,6 +3043,7 @@ li {
 
 .how_it_works .block-title {
     margin-bottom: 90px;
+    margin-top: 26px;
 }
 
 .how_it_works_single {
@@ -8274,3 +8275,18 @@ li {
 .listing_details_calculator .thm-btn {
     font-weight: 700;
 }
+/* ========boton-whatsapp======= */
+.btn-whatsapp {
+    display:block;
+    width:70px;
+    height:70px;
+    color:#fff;
+    position: fixed;
+    /* right:20px; */
+    left: 20px;
+    bottom:20px;
+    border-radius:50%;
+    line-height:80px;
+    text-align:center;
+    z-index:99;
+  }
