@@ -33,6 +33,7 @@
     
     </head>
 <body>
+ <div class="page-wrapper">
     <div class="preloader">
         <img src="{{asset('assets/img/logo/logo.svg')}}" class="preloader__image" alt="">
     </div><!-- /.preloader -->
@@ -230,6 +231,29 @@
         </div>
     </footer>
     <!--Site Footer One End-->
+    <!--Site Footer Bottom Start-->
+    <div class="site_footer_bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="site_footer_inner">
+                        <div class="site_footer_left">
+                            <p>© Copyright 2021 by <a href="#">medicexpress</a></p>
+                        </div>
+                        <div class="site_footer__social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook-square"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Site Footer Bottom End-->
+</div>   
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
     <!-- =============scripts============ -->
     <script src="{{asset('assets/js/jquery.min.js')}}"></script>
