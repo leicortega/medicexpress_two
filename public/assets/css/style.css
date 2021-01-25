@@ -46,9 +46,9 @@ font-family: 'Inter', sans-serif;
 
 :root {
     --thm-font: 'Inter', sans-serif;
-    --thm-base: #00a8d2;
+    --thm-base: #0ba1bb;
     --thm-base-rgb: 76, 124, 227;
-    --thm-primary: #f84159;
+    --thm-primary: #d9182d;
     --thm-primary-rgb: 98, 206, 197;
     --thm-black: #282f44;
     --thm-black-rgb: 40, 47, 68;
@@ -536,7 +536,7 @@ li {
 .header_top_one_logo {
     position: relative;
     display: block;
-    padding: 50.4px 0;
+    padding: 39.4px 0;
 }
 
 .header_top_one_logo a {}
@@ -1600,7 +1600,7 @@ li {
 .banner_three {
     position: relative;
     display: block;
-    padding-top: 165px;
+    padding-top: 153px;
     padding-bottom: 75px;
 }
 
@@ -1622,7 +1622,7 @@ li {
     top: -110px;
     bottom: 0;
     right: 0;
-    background: #eff1f6;
+    /* background: #eff1f6; */
     width: 930px;
     z-index: -1;
 }
@@ -1639,7 +1639,7 @@ li {
 
 .banner_three_shape_three {
     position: absolute;
-    top: -109px;
+    top: -75px;
     left: -19px;
     width: 205px;
     height: 348px;
@@ -4586,7 +4586,7 @@ li {
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
     background-color: rgb(255, 255, 255);
-    padding: 58px 60px 49px;
+    padding: 58px 60px 43px;
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
@@ -4633,6 +4633,9 @@ li {
     z-index: 2;
     position: relative;
     display: block;
+}
+.three_icons_list li .three_icons_box img{
+    width: 90px;
 }
 
 .three_icons_list li .three_icons_box span {

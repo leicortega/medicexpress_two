@@ -3,141 +3,200 @@
 @section('title', 'Medicexpress')
 
 @section('content')
-     <!-- Banner Section One Start -->
-     <section class="banner-one">
-        <div class="banner-bg-slide"
-            data-options='{ "delay": 5000, "slides": [ { "src": "{{asset('assets/img/banner/5.jpeg')}}" },
-             { "src": "{{asset('assets/img/banner/10.jpeg')}}" } , { "src": "{{asset('assets/img/banner/slider3.jpeg')}}" }], "transition": "fade", "timer": false, "align": "top", 
-             "animation": [ "kenburnsUp", "kenburnsDown", "kenburnsLeft", "kenburnsRight" ] }'>
-        </div><!-- /.banner-bg-slide -->
+    <!--Banner Three Start-->
+    <section class="banner_three">
+        <div class="banner_three_home_img">
+            <img src="{{asset('assets/img/banner/slider3.jpeg')}}" alt="">
+        </div>
+        <div class="banner_three_shape_one"></div>
+        <div class="banner_three_shape_two"></div>
+        <div class="banner_three_shape_three"
+            style="background-image: url({{asset('assets/img/shapes/banner_three_shape_3.png')}})"></div>
+        <div class="banner_three_shape_four"
+            style="background-image: url(assets/images/shapes/banner_three_shape_4.png)"></div>
         <div class="container">
-            <div class="content-box">
-                <div class="top-title">
-                    <h2>Lorem ipsum dolor sit  <br> amet consectetur</h2>
-                </div>
-
-                <!--<div class="product-tab-box tabs-box">
-                    <ul class="tab-btns tab-buttons clearfix list-unstyled">
-                        <li data-tab="#desc" class="tab-btn active-btn"><span>Buy</span></li>
-                        <li data-tab="#addi__info" class="tab-btn"><span>Sale</span></li>
-                        <li data-tab="#review" class="tab-btn"><span>Rent</span></li>
-                    </ul>
-                    <div class="tabs-content">
-                        <div class="tab active-tab" id="desc">
-                            <form class="banner_one_search_form" action="/listing-1.html">
-                                <div class="banner_one_search_form_input_box">
-                                    <input type="text" placeholder="Search for city, property, agent and more...">
-                                    <button type="submit" class="thm-btn banner_one_search_btn">Search
-                                        Property</button>
-                                    <div class="banner_one_search_icon">
-                                        <a href="#"><span class="icon-magnifying-glass"></span></a>
-                                    </div>
-                                </div>
-                            </form>
+            <div class="row">
+                <div class="col-xl-5">
+                    <div class="banner_three_content">
+                        <div class="banner_three_top_title">
+                            <h2>Luxury <br> Downtown <br> Apartments</h2>
+                            <p>From as low as $10 per day with limited time offer</p>
                         </div>
-
-                        <div class="tab" id="addi__info">
-                            <form class="banner_one_search_form" action="/listing-1.html">
-                                <div class="banner_one_search_form_input_box">
-                                    <input type="text" placeholder="Search for city, property, agent and more...">
-                                    <button type="submit" class="thm-btn banner_one_search_btn">Search
-                                        Property</button>
-                                    <div class="banner_one_search_icon">
-                                        <a href="#"><span class="icon-magnifying-glass"></span></a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                        <div class="tab" id="review">
-                            <form class="banner_one_search_form" action="/listing-1.html">
-                                <div class="banner_one_search_form_input_box">
-                                    <input type="text" placeholder="Search for city, property, agent and more...">
-                                    <button type="submit" class="thm-btn banner_one_search_btn">Search
-                                        Property</button>
-                                    <div class="banner_one_search_icon">
-                                        <a href="#"><span class="icon-magnifying-glass"></span></a>
-                                    </div>
-                                </div>
-                            </form>
+                        <div class="product-tab-box tabs-box">
+                            
                         </div>
                     </div>
-                </div>-->
-                <div class="banner_one_bottom_icon_text">
-                    <p style="color: #fff;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta odio doloremque ex amet beatae esse,
-                        eveniet libero labore voluptatum vero! Harum dolore labore modi quasi id error fuga magnam a?</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Banner Section One End -->
-    <!--servicios-->
-    <section class="how_it_works">
-        <div class="how_it_works_shape_1">
-            <img src="{{asset('assets/img/shapes/how_it_works_shape_1.png')}}" alt="">
-        </div>
-        <div class="container">
-            <div class="block-title text-center">
-                <h4>--- Servicios ---</h4>
-                <h2> Un excelente servicio </h2>
+    <!--Banner Three Start-->
+    <!--Are You Ready Start-->
+    <section class="are_you_ready two jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
+    style="background-image: url({{asset('assets/img/banner/5.jpeg')}})">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="are_you_ready_content">
+                    <div class="are_you_ready_shape"><img src="{{asset('assets/img//shapes/are_you_ready_shape.png')}}"
+                            alt=""></div>
+                    <h2>Nos especializamos en</h2>
+                    <a href="listing-1.html" class="thm-btn">Leer mas..</a>
+                </div>
             </div>
+        </div>
+    </div>
+</section>
+<!--Are You Ready End-->
+    <!--Three Icons Start-->
+    <section class="three_icons">
+        <div class="container">
             <div class="row">
                 <div class="col-xl-12">
-                    <ul class="how_it_works_single list-unstyled">
-                        <li>
-                            <div class="how_it_works_img">
-                                <img src="{{asset('assets/img/iconos/medico.png')}}" alt="">
-                                <div class="how_it_works_circle">
-                                    <p>01</p>
+                    <div class="three_icons_inner">
+                        <ul class="three_icons_list clearfix list-unstyled">
+                            <li>
+                                <div class="three_icons_box">
+                                    <img src="{{asset('assets/img/iconos/medico.png')}}" alt="">
                                 </div>
-                            </div>
-                            <div class="how_it_works_content">
-                                <h3>Atención medica</h3>
-                                <p>Quisqu tell us risus adpis viera bibe um urna.</p>
-                            </div>
-                        </li>
-                        <li class="item-2">
-                            <div class="how_it_works_img">
-                                <img src="{{asset('assets/img/iconos/salud.png')}}" alt="">
-                                <div class="how_it_works_circle">
-                                    <p>02</p>
+                                <div class="three_icons_text">
+                                    <h4>Atención medica</h4>
+                                    <p>Lorem ipsum is simply dolor <br> sit am adipi we help.</p>
                                 </div>
-                            </div>
-                            <div class="how_it_works_content">
-                                <h3>Salud ocupacional</h3>
-                                <p>Quisqu tell us risus adpis viera bibe um urna.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="how_it_works_img">
-                                <img src="{{asset('assets/img/iconos/consultoria.png')}}" alt="">
-                                <div class="how_it_works_circle">
-                                    <p>03</p>
+                            </li>
+                            <li>
+                                <div class="three_icons_box">
+                                    <img src="{{asset('assets/img/iconos/salud.png')}}" alt="">
                                 </div>
-                            </div>
-                            <div class="how_it_works_content">
-                                <h3>Consultorias</h3>
-                                <p>Quisqu tell us risus adpis viera bibe um urna.</p>
-                            </div>
-                        </li>
-                        <li class="item-4">
-                            <div class="how_it_works_img">
-                                <img src="{{asset('assets/img/iconos/ambulancia1.png')}}" alt="">
-                                <div class="how_it_works_circle">
-                                    <p>04</p>
+                                <div class="three_icons_text">
+                                    <h4>Salud ocupacional</h4>
+                                    <p>Lorem ipsum is simply dolor <br> sit am adipi we help.</p>
                                 </div>
-                            </div>
-                            <div class="how_it_works_content">
-                                <h3>Servicio de ambulancia</h3>
-                                <p>Quisqu tell us risus adpis viera bibe um urna.</p>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                            <li>
+                                <div class="three_icons_box">
+                                    <img src="{{asset('assets/img/iconos/consultoria.png')}}" alt="">
+                                </div>
+                                <div class="three_icons_text">
+                                    <h4>Consultorias</h4>
+                                    <p>Lorem ipsum is simply dolor <br> sit am adipi we help.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--servicios End-->
+    <!--Three Icons End-->
+    <!--Featured Properties Start-->
+    <section class="featured_properties jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
+        style="background-image: url(assets/images/backgrounds/featured_properties_bg.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="featured_properties_left wow slideInLeft" data-wow-delay="100ms">
+                        <div class="featured_properties_img">
+                            <img src="{{asset('assets/img/banner/6.jpeg')}}" alt="">
+                            <!--<div class="featured_and_sale_btn">
+                                <a href="#" class="featured_btn">Featured</a>
+                                <a href="#" class="sale_btn">For Rent</a>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="featured_properties_right">
+                        <div class="block-title text-left">
+                            <h4>Checkout New</h4>
+                            <h2>Featured Properties</h2>
+                        </div>
+                     <div class="featured_properties_text">
+                            <p>Lorem ipsum dolor sit amet nsectetur cing elituspe ndisse suscipit sagitis leo sit.
+                            </p>
+                        </div>
+                    <ul class="featured_properties_right_list list-unstyled">
+                         <li><span class="icon-confirmation"></span>Nsectetur cing elit.</li>
+                            <li><span class="icon-confirmation"></span>Suspe ndisse suscipit sagittis leo.</li>
+                            <li><span class="icon-confirmation"></span>Entum estibulum dignissim posuere.</li>
+                        </ul>
+                        <a href="#" class="thm-btn" style="margin-top: 27px;">Leer mas</a>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Featured Properties End-->
+    <!--Membership Plan Start-->
+        <section class="membership_plan two">
+            <div class="container">
+                <div class="block-title text-center">
+                    <h4>Choose the Right Plan</h4>
+                    <h2>Membership Plans</h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4">
+                        <!--Membership Plan Single-->
+                        <div class="membership_plan_single wow fadeInUp" data-wow-delay="00ms">
+                            <div class="membership_plan_icon">
+                                <span class="icon-home-1"></span>
+                            </div>
+                            <div class="membership_plan_price">
+                                <p>Personal</p>
+                                <h2>$20.00</h2>
+                            </div>
+                            <ul class="membership_plan_serivce_list list-unstyled">
+                                <li><span class="fa fa-check"></span>10 Listings</li>
+                                <li><span class="fa fa-check"></span>2 Featured Listings</li>
+                            </ul>
+                            <div class="membership_plan_btn">
+                                <a href="#" class="thm-btn">Choose Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4">
+                        <!--Membership Plan Single-->
+                        <div class="membership_plan_single wow fadeInUp" data-wow-delay="200ms">
+                            <div class="membership_plan_icon">
+                                <span class="icon-house"></span>
+                            </div>
+                            <div class="membership_plan_price">
+                                <p>Professional</p>
+                                <h2>$30.00</h2>
+                            </div>
+                            <ul class="membership_plan_serivce_list list-unstyled">
+                                <li><span class="fa fa-check"></span>20 Listings</li>
+                                <li><span class="fa fa-check"></span>6 Featured Listings</li>
+                            </ul>
+                            <div class="membership_plan_btn">
+                                <a href="#" class="thm-btn">Choose Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4">
+                        <!--Membership Plan Single-->
+                        <div class="membership_plan_single wow fadeInUp" data-wow-delay="300ms">
+                            <div class="membership_plan_icon">
+                                <span class="icon-cityscape"></span>
+                            </div>
+                            <div class="membership_plan_price">
+                                <p>Business</p>
+                                <h2>$40.00</h2>
+                            </div>
+                            <ul class="membership_plan_serivce_list list-unstyled">
+                                <li><span class="fa fa-check"></span>40 Listings</li>
+                                <li><span class="fa fa-check"></span>20 Featured Listings</li>
+                            </ul>
+                            <div class="membership_plan_btn">
+                                <a href="#" class="thm-btn">Choose Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--Membership Plan End-->
     <!--Cotizar-->
         <section class="providing_one jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
             style="background-image: url({{asset('assets/img/banner/slider3.jpeg')}})">

@@ -45,7 +45,7 @@
                 <div class="header_top_one_inner clearfix">
                     <div class="header_top_one_logo_box float-left">
                         <div class="header_top_one_logo">
-                            <a href="#"><img src="{{asset('assets/img/logo/logo.svg')}}" alt="" style="width: 165px"></a>
+                            <a href="#"><img src="{{asset('assets/img/logo/logo.svg')}}" alt="" style="width: 200px"></a>
                         </div>
                     </div>
                     <div class="header_top_one_content_box float-right">
@@ -63,12 +63,12 @@
                         </div>
                         <div class="header_top_one_content_box_bottom">
                             <div class="header_top_one_content_box_bottom_inner clearfix">
-                                <div class="header_top_one_content_box_bottom__social_box">
+                                <!--<div class="header_top_one_content_box_bottom__social_box">
                                     <div class="header_top_one_content_box_bottom__social">
                                         <a href="#"><i class="fab fa-twitter"></i></a>
                                         <a href="#"><i class="fab fa-facebook-square"></i></a>
                                         <a href="#"><i class="fab fa-instagram"></i></a>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="header_top_one_content_box_bottom_contact_info">
                                     <ul class="header_top_one_content_box_bottom_contact_info_list list-unstyled">
@@ -259,6 +259,41 @@
         </a>
     </div>
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay side-menu__toggler mobile-nav__toggler"></div>
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close side-menu__toggler mobile-nav__toggler">
+                <i class="fa fa-times"></i>
+            </span>
+            <div class="logo-box">
+                <a href="index.html" aria-label="logo image">
+                    <img src="assets/images/resources/logo-2.png" alt="" />
+                </a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container clearfix"></div>
+            <!-- /.mobile-nav__container -->
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="icon-message"></i>
+                    <a href="mailto:servicioalcliente@medicexpress.com">servicio al cliente</a>
+                </li>
+                <li>
+                    <i class="icon-phone-call"></i>
+                    <a href="tel:+593 969 665 037">+593 969 665 037</a>
+                </li>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="facebook"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#" aria-label="pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+                </div><!-- /.mobile-nav__social -->
+            </div><!-- /.mobile-nav__top -->
+        </div>
+    </div>
 
     <!-- =============scripts============ -->
     <script src="{{asset('assets/js/jquery.min.js')}}"></script>
