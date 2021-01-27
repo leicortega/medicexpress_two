@@ -313,6 +313,7 @@ li {
 }
 
 .preloader__image {
+    width: 260px;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     -webkit-animation-name: flipInY;
@@ -5660,7 +5661,8 @@ li {
 .contact {
     position: relative;
     display: block;
-    padding-bottom: 120px;
+    padding-top: 120px;
+    padding-bottom: 60px;
 }
 
 .contact .block-title {

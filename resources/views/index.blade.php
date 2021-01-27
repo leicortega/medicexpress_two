@@ -89,7 +89,7 @@
         </div>
     </section>
     <!--Three Icons End-->
-    <!--Featured Properties Start-->
+    <!--About us-->
     <section class="featured_properties jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
         style="background-image: url(assets/images/backgrounds/featured_properties_bg.jpg)">
         <div class="container">
@@ -108,17 +108,22 @@
                 <div class="col-xl-6 col-lg-6">
                     <div class="featured_properties_right">
                         <div class="block-title text-left">
-                            <h4>Checkout New</h4>
-                            <h2>Featured Properties</h2>
+                            <h4>--Nosotros--</h4>
+                            <h2>Quienes Somos</h2>
                         </div>
                      <div class="featured_properties_text">
-                            <p>Lorem ipsum dolor sit amet nsectetur cing elituspe ndisse suscipit sagitis leo sit.
+                            <p>Somos un grupo de profesionales dedicados al servicio privado en el área de la
+                                 salud integral (medico/ambulatorio), salud ocupacional, jornadas preventivas de salud y consultorías en seguridad 
+                                 y salud a
+                                 toda la comunidad, trabajadores independientes, contratistas y empresas. Brindando CALIDAD Y SERVICIO.
                             </p>
                         </div>
                     <ul class="featured_properties_right_list list-unstyled">
-                         <li><span class="icon-confirmation"></span>Nsectetur cing elit.</li>
-                            <li><span class="icon-confirmation"></span>Suspe ndisse suscipit sagittis leo.</li>
-                            <li><span class="icon-confirmation"></span>Entum estibulum dignissim posuere.</li>
+                         <li><span class="icon-confirmation"></span>Misión</li>
+                            <li><span class="icon-confirmation"></span>Visión
+                            </li>
+                            <li><span class="icon-confirmation"></span>Objetivo y principios de calidad
+                            </li>
                         </ul>
                         <a href="#" class="thm-btn" style="margin-top: 27px;">Leer mas</a>
                     
@@ -127,7 +132,7 @@
             </div>
         </div>
     </section>
-    <!--Featured Properties End-->
+    <!--About us End-->
     <!--Membership Plan Start-->
         <section class="membership_plan two">
             <div class="container">
@@ -352,6 +357,66 @@
         </div>
     </section>
     <!--Blog One End-->
+    
+    <!--Contact Start-->
+    <section class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4">
+                    <div class="block-title text-left">
+                        <h4>--Contacto--</h4>
+                        <h2>Contáctanos</h2>
+                    </div>
+                    <div class="contact_text">
+                        <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit sed do eiusm od tempor ut
+                            labore. sit amet scelerisque. Phasellus hendrerit neque a augue.</p>
+                    </div>
+                    <div class="contact__social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-8">
+                    <form action="inc/sendemail.php" class="contact__form">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="comment_input_box">
+                                    <input type="text" placeholder="Tu nombre" name="name">
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="comment_input_box">
+                                    <input type="email" placeholder="Dirección de correo electronico" name="email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="comment_input_box">
+                                    <input type="text" placeholder="Numero de telefono" name="phone">
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="comment_input_box">
+                                    <input type="email" placeholder="Tema" name="Subject">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="comment_input_box">
+                                    <textarea name="message" placeholder="Escribir mensaje"></textarea>
+                                </div>
+                                <button type="submit" class="thm-btn comment-form__btn">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Contact End-->
     <!--Brand One Start-->
     <div class="brand_one">
         <div class="container">
@@ -417,63 +482,4 @@
         </div>
     </div>
     <!--Brand One End-->
-    <!--Contact Start-->
-    <section class="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-lg-4">
-                    <div class="block-title text-left">
-                        <h4>--Contacto--</h4>
-                        <h2>Contáctanos</h2>
-                    </div>
-                    <div class="contact_text">
-                        <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit sed do eiusm od tempor ut
-                            labore. sit amet scelerisque. Phasellus hendrerit neque a augue.</p>
-                    </div>
-                    <div class="contact__social">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook-square"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="col-xl-8 col-lg-8">
-                    <form action="inc/sendemail.php" class="contact__form">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="comment_input_box">
-                                    <input type="text" placeholder="Tu nombre" name="name">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="comment_input_box">
-                                    <input type="email" placeholder="Dirección de correo electronico" name="email">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="comment_input_box">
-                                    <input type="text" placeholder="Numero de telefono" name="phone">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="comment_input_box">
-                                    <input type="email" placeholder="Tema" name="Subject">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="comment_input_box">
-                                    <textarea name="message" placeholder="Escribir mensaje"></textarea>
-                                </div>
-                                <button type="submit" class="thm-btn comment-form__btn">Enviar</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--Contact End-->
 @endsection
