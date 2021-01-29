@@ -43,6 +43,9 @@
 font-family: 'Inter', sans-serif;
 
 */
+html{
+    scroll-behavior: smooth;
+}
 
 :root {
     --thm-font: 'Inter', sans-serif;
@@ -123,7 +126,7 @@ li {
 .block-title h4 {
     position: relative;
     font-size: 16px;
-    color: var(--thm-primary);
+    color: #fff;
     line-height: 26px;
     display: inline-block;
     font-weight: 600;
@@ -157,7 +160,7 @@ li {
 }
 
 .thm-btn:hover {
-    background-color: var(--thm-btn);
+    background-color: var(--thm-base);
     color: #ffffff;
 }
 
@@ -4604,7 +4607,7 @@ li {
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
     background-color: rgb(255, 255, 255);
-    padding: 58px 60px 43px;
+    padding: 58px 49px 43px;
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }

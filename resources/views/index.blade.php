@@ -33,8 +33,8 @@
     <!--Banner Three Start-->
     <!--Are You Ready Start-->
     <section class="are_you_ready two jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-    style="background-image: url({{asset('assets/img/banner/5.jpeg')}})">
-    <div class="container">
+        style="background-image: url({{asset('assets/img/banner/5.jpeg')}})">
+        <div class="container">
         <div class="row">
             <div class="col-xl-12">
                 <div class="are_you_ready_content">
@@ -45,8 +45,8 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
+        </div>
+    </section>
 <!--Are You Ready End-->
     <!--Three Icons Start-->
     <section class="three_icons">
@@ -61,7 +61,7 @@
                                 </div>
                                 <div class="three_icons_text">
                                     <h4>Atención medica</h4>
-                                    <p>Lorem ipsum is simply dolor <br> sit am adipi we help.</p>
+                                    <p>En su domicilio, lugar de trabajo y/u otro lugar dentro de la cobertura</p>
                                 </div>
                             </li>
                             <li>
@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="three_icons_text">
                                     <h4>Salud ocupacional</h4>
-                                    <p>Lorem ipsum is simply dolor <br> sit am adipi we help.</p>
+                                    <p>Disponemos de profesionales medicos especializados en salud ocupacional</p>
                                 </div>
                             </li>
                             <li>
@@ -79,7 +79,7 @@
                                 </div>
                                 <div class="three_icons_text">
                                     <h4>Consultorias</h4>
-                                    <p>Lorem ipsum is simply dolor <br> sit am adipi we help.</p>
+                                    <p>Análisis y explicación de conceptos de exámenes ocupacionales</p>
                                 </div>
                             </li>
                         </ul>
@@ -115,7 +115,7 @@
                             <p>Somos un grupo de profesionales dedicados al servicio privado en el área de la
                                  salud integral (medico/ambulatorio), salud ocupacional, jornadas preventivas de salud y consultorías en seguridad 
                                  y salud a
-                                 toda la comunidad, trabajadores independientes, contratistas y empresas. Brindando CALIDAD Y SERVICIO.
+                                 toda la comunidad, trabajadores independientes, contratistas y empresas. Brindando<b> CALIDAD Y SERVICIO</b>.
                             </p>
                         </div>
                     <ul class="featured_properties_right_list list-unstyled">
@@ -138,7 +138,7 @@
             <div class="container">
                 <div class="block-title text-center">
                     <h4>Selecciona un plan</h4>
-                    <h2>Nuestros planes</h2>
+                    <h2>Promociones</h2>
                 </div>
                 <div class="row">
                     <div class="col-xl-4 col-lg-4">
@@ -274,8 +274,7 @@
                             <h2>Ultimas noticias <br>& Articulos</h2>
                         </div>
                         <div class="blog_one_text">
-                            <p>Lorem ipsum onts persp unde omnis iste natus errluptatem acc usantium demque
-                                laudantium totam.</p>
+                            <p>Programas Gratuitos de prevención a los trabajadores de las Empresas.</p>
                         </div>
                     </div>
                 </div>
@@ -359,7 +358,7 @@
     <!--Blog One End-->
     <!--contact one-->
     <section class="why_choose_one jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-        style="background-image: url({{asset('assets/img/banner/1.jpeg')}})">
+        style="background-image: url({{asset('assets/img/banner/1.jpeg')}})" id="contact">
         <div class="container">
         <div class="why_choose_one_title">
             <h2>Contáctenos</h2>
@@ -407,9 +406,9 @@
                 </div>
             </form>
         </div>
-    </div>
-</section>
-<!--contact one End-->
+        </div>
+    </section>
+    <!--contact one End-->
     <!--Contact Start-->
     <!--<section class="contact">
         <div class="container">

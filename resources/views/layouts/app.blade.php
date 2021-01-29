@@ -111,7 +111,7 @@
                             <div class="main-nav__main-navigation one clearfix">
                                 <ul class=" main-nav__navigation-box float-left">
                                     <li>
-                                        <a href="#">Inicio</a>
+                                        <a href="http://localhost/medicexpress_two/public/">Inicio</a>
                                     </li>
                                     <li class="dropdown">
                                         <a href="#">Quienes somos</a>
@@ -134,8 +134,8 @@
                                         <a href="#">Blog</a>
                                     </li>
                                    
-                                    <li>
-                                        <a href="#">Contactenos</a>
+                                    <li class="scroll-to-target" style="scroll-behavior: smooth;">
+                                        <a href="#contact">Contactenos</a>
                                     </li>
                                 </ul>
                             </div><!-- /.navbar-collapse -->
