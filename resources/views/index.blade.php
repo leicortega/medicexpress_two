@@ -125,7 +125,7 @@
                             <li><span class="icon-confirmation"></span>Objetivo y principios de calidad
                             </li>
                         </ul>
-                        <a href="#" class="thm-btn" style="margin-top: 27px;">Leer mas</a>
+                        <a href="#" class="thm-btn btn-a" style="margin-top: 27px;">Leer mas</a>
                     
                     </div>
                 </div>
@@ -214,7 +214,7 @@
                                 <h2>Que esperas para realizar <br> tu cotización</h2>
                             </div>
                             <div class="providing_one_btn">
-                                <a href="#" class="thm-btn">Cotizar ahora</a>
+                                <a href="#" class="thm-btn btn-a">Cotizar ahora</a>
                             </div>
                             <div class="providing_one_shaape_one">
                                 <img src="{{asset('assets/img/shapes/providing_one_shape_1.png')}}" alt="">
@@ -408,7 +408,7 @@
                                 <div class="comment_input_box">
                                     <textarea name="message" placeholder="Escribir mensaje"></textarea>
                                 </div>
-                                <button type="submit" class="thm-btn comment-form__btn">Enviar</button>
+                                <button type="submit" class="thm-btn  comment-form__btn btn-a">Enviar</button>
                             </div>
                         </div>
                     </form>
