@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                     <div class="header_top_one_content_box float-right">
-                        <div class="header_top_one_content_box_top clearfix">
+                        <!-- <div class="header_top_one_content_box_top clearfix">
                             <div class="header_top_one_content_box_top_left float-left">
                                 <p>Bienvenido a Medicexpress</p>
                             </div>
@@ -60,7 +60,7 @@
                                     <li><a href="#">Mi cuenta</a></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="header_top_one_content_box_bottom">
                             <div class="header_top_one_content_box_bottom_inner clearfix">
                                 <!--<div class="header_top_one_content_box_bottom__social_box">
@@ -163,14 +163,14 @@
     @yield('content')
     
     <!--Site Footer One Start-->
-    <footer class="site_footer" style="background-image: url(assets/images/resources/site_footer_top_bg.jpg)">
+    <footer class="site_footer">
         <div class="container">
             <div class="site_footer_one_top">
                 <div class="row">
                     <div class="col-xl-3 col-lg-6 wow fadeInUp" data-wow-delay="00ms">
                         <div class="footer-widget__column footer_widget__about">
                             <div class="footer_logo">
-                                <a href="#"><img src="{{asset('assets/img/logo/logo.svg')}}" alt="" style="background-color: #fff; width: 188px;"></a>
+                                <a href="#"><img src="{{asset('assets/img/logo/logo.svg')}}" alt="" style=" width: 188px;"></a>
                             </div>
                             <div class="footer_widget_about_text">
                                 <p>Forjando juntos una intervención efectiva, eficiente y eficaz al 

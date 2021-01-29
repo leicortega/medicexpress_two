@@ -856,15 +856,32 @@
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1729px) {
-    .banner_three_home_img {
-        right: -235px;
+    .banner_three{
+        min-height: 60vh;
     }
-
+    .banner_three_home_img {
+        right: -337px;
+    }
+    .banner_three_top_title{
+        top: -40px;
+    }
     .banner_three_home_img img {
-        width: 75%;
+        width: 60%;
+        margin-top: 5%;
     }
 }
-
+@media only screen and (min-width: 1740px) and (max-width: 20258px){
+    .banner_three{
+        min-height: 90vh;
+    }
+    .banner_three_top_title{
+        margin-top: 9%;
+    }
+    .banner_three_home_img img {
+        width: 70%;
+        margin-top: 8%;
+    }
+}
 /*--------------------------------------------------------------
 # Slider All Responsice Css
 /////////
