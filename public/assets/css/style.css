@@ -43,9 +43,7 @@
 font-family: 'Inter', sans-serif;
 
 */
-html{
-    scroll-behavior: smooth;
-}
+
 
 :root {
     --thm-font: 'Inter', sans-serif;
@@ -132,7 +130,15 @@ li {
     font-weight: 600;
     margin-bottom: 7px;
 }
-
+.block-title .h4{
+    position: relative;
+    font-size: 16px;
+    color: var(--thm-btn);
+    line-height: 26px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
 .block-title h2 {
     font-size: 50px;
     color: var(--thm-black);
@@ -548,7 +554,7 @@ li {
 .header_top_one_logo {
     position: relative;
     display: block;
-    padding: 20x 0;
+    padding: 20px 0;
 }
 
 .header_top_one_logo a {}
@@ -665,7 +671,8 @@ li {
     display: flex;
     align-items: center;
     padding: 10px 0;
-   
+    margin-top: 3.5%;
+    margin-bottom: 3%;
 }
 
 .header_top_one_content_box_bottom_contact_info_list li {

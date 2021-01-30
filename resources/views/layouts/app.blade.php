@@ -135,7 +135,7 @@
                                     </li>
                                    
                                     <li class="scroll-to-target" style="scroll-behavior: smooth;">
-                                        <a href="#contact">Contactenos</a>
+                                        <a href="#">Contactenos</a>
                                     </li>
                                 </ul>
                             </div><!-- /.navbar-collapse -->
@@ -170,7 +170,7 @@
                     <div class="col-xl-3 col-lg-6 wow fadeInUp" data-wow-delay="00ms">
                         <div class="footer-widget__column footer_widget__about">
                             <div class="footer_logo">
-                                <a href="#"><img src="{{asset('assets/img/logo/logo.svg')}}" alt="" style=" width: 188px;"></a>
+                                <a href="#"><img src="{{asset('assets/img/logo/logo.svg')}}" alt="" style=" width: 225px;"></a>
                             </div>
                             <div class="footer_widget_about_text">
                                 <p>Forjando juntos una intervención efectiva, eficiente y eficaz al 

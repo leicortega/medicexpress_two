@@ -137,11 +137,11 @@
         <section class="membership_plan two">
             <div class="container">
                 <div class="block-title text-center">
-                    <h4>Selecciona un plan</h4>
+                    <h4 class="h4">--Planes--</h4>
                     <h2>Promociones</h2>
                 </div>
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4">
+                    {{-- <div class="col-xl-4 col-lg-4">
                         <!--Membership Plan Single-->
                         <div class="membership_plan_single wow fadeInUp" data-wow-delay="00ms">
                             <div class="membership_plan_icon">
@@ -159,8 +159,8 @@
                                 <a href="#" class="thm-btn">Choose Plan</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4">
+                    </div> --}}
+                    <div class="col-xl-10 col-lg-10" style="margin: auto;">
                         <!--Membership Plan Single-->
                         <div class="membership_plan_single wow fadeInUp" data-wow-delay="200ms">
                             <div class="membership_plan_icon">
@@ -179,7 +179,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4">
+                    {{-- <div class="col-xl-4 col-lg-4">
                         <!--Membership Plan Single-->
                         <div class="membership_plan_single wow fadeInUp" data-wow-delay="300ms">
                             <div class="membership_plan_icon">
@@ -197,7 +197,7 @@
                                 <a href="#" class="thm-btn">Choose Plan</a>
                             </div>
                         </div>
-                    </div>
+                    </div>--> --}}
                 </div>
             </div>
         </section>
@@ -358,7 +358,7 @@
     <!--Blog One End-->
     <!--contact one-->
     <section class="why_choose_one jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-        style="background-image: url({{asset('assets/img/banner/1.jpeg')}})" id="contact">
+        style="background-image: url({{asset('assets/img/banner/1.jpeg')}})">
         <div class="container">
         <div class="why_choose_one_title">
             <h2>Contáctenos</h2>
