@@ -111,10 +111,10 @@
                             <div class="main-nav__main-navigation one clearfix">
                                 <ul class=" main-nav__navigation-box float-left">
                                     <li>
-                                        <a href="{{ route('index') }}" class="{{request()->routeIs('index') ? 'active' : ''}}">Inicio</a>
+                                        <a href="{{ route('index') }}" class="{{request()->routeIs('index') ? 'enlace' : ''}}">Inicio</a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="{{ route('nosotros.index')}}" class="{{request()->routeIs('nosotros.index') ? 'active' : ''}}">Quienes somos</a>
+                                        <a href="{{ route('nosotros.index')}}" class="{{request()->routeIs('nosotros.index') ? 'enlace' : ''}}">Quienes somos</a>
                                         <ul>
                                             <li><a href="{{ route('nosotros.index')}}" >Misión</a></li>
                                             <li><a href="{{ route('nosotros.index')}}" >Visión</a></li>
@@ -123,11 +123,11 @@
                                         </ul><!-- /.sub-menu -->
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#">Servicios</a>
+                                        <a href="{{route('servicios.index')}}" class="{{request()->routeIs('servicios.index') ? 'enlace' : ''}}">Servicios</a>
                                         <ul>
-                                            <li><a href="#">Atención medica</a></li>
-                                            <li><a href="#">Salud ocupacional</a></li>
-                                            <li><a href="#">Consultorias</a></li>
+                                            <li><a href="{{route('servicios.index')}}">Atención medica</a></li>
+                                            <li><a href="{{route('servicios.index')}}">Salud ocupacional</a></li>
+                                            <li><a href="{{route('servicios.index')}}">Consultorias</a></li>
                                         </ul><!-- /.sub-menu -->
                                     </li>
                                     <li>
@@ -135,14 +135,14 @@
                                     </li>
                                    
                                     <li>
-                                        <a href="#">Contactenos</a>
+                                        <a href="{{route('contacto')}}" class="{{request()->routeIs('contacto') ? 'enlace' : ''}}">Contactenos</a>
                                     </li>
                                 </ul>
                             </div><!-- /.navbar-collapse -->
                         </div>
                         <div class="main-nav__right main-nav__right_one float-right">
                             <div class="header_btn_1">
-                                <a href="#" class="thm-btn">Cotizar Ahora</a>
+                                <a href="{{route('contacto')}}" class="thm-btn">Cotizar Ahora</a>
                             </div>
                             <!--<div class="icon_cart_box">
                                 <a href="#">
@@ -160,8 +160,74 @@
             </div>
         </header>
     </div>
+
     @yield('content')
     
+    <!--Brand One Start-->
+    <div class="brand_one">
+        <div class="container">
+            <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 100, "slidesPerView": 5, "autoplay": { "delay": 5000 }, "breakpoints": {
+            "0": {
+                "spaceBetween": 30,
+                "slidesPerView": 2
+            },
+            "375": {
+                "spaceBetween": 30,
+                "slidesPerView": 2
+            },
+            "575": {
+                "spaceBetween": 30,
+                "slidesPerView": 3
+            },
+            "767": {
+                "spaceBetween": 50,
+                "slidesPerView": 4
+            },
+            "991": {
+                "spaceBetween": 50,
+                "slidesPerView": 5
+            },
+            "1199": {
+                "spaceBetween": 100,
+                "slidesPerView": 5
+            }
+        }}'>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="{{asset('assets/img/brand/brand_1_img_1.png')}}" alt="">
+                    </div><!-- /.swiper-slide -->
+                    <div class="swiper-slide">
+                        <img src="{{asset('assets/img/brand/brand_1_img_2.png')}}" alt="">
+                    </div><!-- /.swiper-slide -->
+                    <div class="swiper-slide">
+                        <img src="{{asset('assets/img/brand/brand_1_img_3.png')}}" alt="">
+                    </div><!-- /.swiper-slide -->
+                    <div class="swiper-slide">
+                        <img src="{{asset('assets/img/brand/brand_1_img_4.png')}}" alt="">
+                    </div><!-- /.swiper-slide -->
+                    <div class="swiper-slide">
+                        <img src="{{asset('assets/img/brand/brand_1_img_5.png')}}" alt="">
+                    </div><!-- /.swiper-slide -->
+                    <div class="swiper-slide">
+                        <img src="{{asset('assets/img/brand/brand_1_img_1.png')}}" alt="">
+                    </div><!-- /.swiper-slide -->
+                    <div class="swiper-slide">
+                        <img src="{{asset('assets/img/brand/brand_1_img_2.png')}}" alt="">
+                    </div><!-- /.swiper-slide -->
+                    <div class="swiper-slide">
+                        <img src="{{asset('assets/img/brand/brand_1_img_3.png')}}" alt="">
+                    </div><!-- /.swiper-slide -->
+                    <div class="swiper-slide">
+                        <img src="{{asset('assets/img/brand/brand_1_img_4.png')}}" alt="">
+                    </div><!-- /.swiper-slide -->
+                    <div class="swiper-slide">
+                        <img src="{{asset('assets/img/brand/brand_1_img_5.png')}}" alt="">
+                    </div><!-- /.swiper-slide -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Brand One End-->
     <!--Site Footer One Start-->
     <footer class="site_footer">
         <div class="container">

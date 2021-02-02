@@ -41,7 +41,7 @@
                     <div class="are_you_ready_shape"><img src="{{asset('assets/img//shapes/are_you_ready_shape.png')}}"
                             alt=""></div>
                     <h2>Nos especializamos en</h2>
-                    <a href="listing-1.html" class="thm-btn">Leer mas..</a>
+                    <a href="{{route('servicios.index')}}" class="thm-btn">Leer mas..</a>
                 </div>
             </div>
         </div>
@@ -214,7 +214,7 @@
                                 <h2>Que esperas para realizar <br> tu cotización</h2>
                             </div>
                             <div class="providing_one_btn">
-                                <a href="#" class="thm-btn btn-a">Cotizar ahora</a>
+                                <a href="{{route('contacto')}}" class="thm-btn btn-a">Cotizar ahora</a>
                             </div>
                             <div class="providing_one_shaape_one">
                                 <img src="{{asset('assets/img/shapes/providing_one_shape_1.png')}}" alt="">
@@ -358,7 +358,7 @@
     <!--Blog One End-->
     <!--contact one-->
     <section class="why_choose_one jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-        style="background-image: url({{asset('assets/img/banner/1.jpeg')}})">
+        style="background-image: url({{asset('assets/img/banner/fondo-form.jpg')}})">
         <div class="container">
         <div class="why_choose_one_title">
             <h2>Contáctenos</h2>
@@ -473,69 +473,5 @@
     </section>-->
     <!--Contact End-->
     
-    <!--Brand One Start-->
-    <div class="brand_one">
-        <div class="container">
-            <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 100, "slidesPerView": 5, "autoplay": { "delay": 5000 }, "breakpoints": {
-            "0": {
-                "spaceBetween": 30,
-                "slidesPerView": 2
-            },
-            "375": {
-                "spaceBetween": 30,
-                "slidesPerView": 2
-            },
-            "575": {
-                "spaceBetween": 30,
-                "slidesPerView": 3
-            },
-            "767": {
-                "spaceBetween": 50,
-                "slidesPerView": 4
-            },
-            "991": {
-                "spaceBetween": 50,
-                "slidesPerView": 5
-            },
-            "1199": {
-                "spaceBetween": 100,
-                "slidesPerView": 5
-            }
-        }}'>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_1.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_2.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_3.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_4.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_5.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_1.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_2.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_3.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_4.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_5.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Brand One End-->
+    
 @endsection
