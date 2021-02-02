@@ -57,7 +57,7 @@
                         <ul class="three_icons_list clearfix list-unstyled">
                             <li>
                                 <div class="three_icons_box">
-                                    <img src="{{asset('assets/img/iconos/medico.png')}}" alt="">
+                                    <img src="{{asset('assets/img/servicios/atencion-medica.jpg')}}" alt="" class="rounded">
                                 </div>
                                 <div class="three_icons_text">
                                     <h4>Atención medica</h4>
@@ -66,7 +66,7 @@
                             </li>
                             <li>
                                 <div class="three_icons_box">
-                                    <img src="{{asset('assets/img/iconos/salud.png')}}" alt="">
+                                    <img src="{{asset('assets/img/servicios/salud-ocupacional.jpg')}}" alt="" class="rounded">
                                 </div>
                                 <div class="three_icons_text">
                                     <h4>Salud ocupacional</h4>
@@ -75,7 +75,7 @@
                             </li>
                             <li>
                                 <div class="three_icons_box">
-                                    <img src="{{asset('assets/img/iconos/consultoria.png')}}" alt="">
+                                    <img src="{{asset('assets/img/servicios/consultorias.jpg')}}" alt="" class="rounded">
                                 </div>
                                 <div class="three_icons_text">
                                     <h4>Consultorias</h4>
@@ -125,7 +125,7 @@
                             <li><span class="icon-confirmation"></span>Objetivo y principios de calidad
                             </li>
                         </ul>
-                        <a href="#" class="thm-btn btn-a" style="margin-top: 27px;">Leer mas</a>
+                        <a href="{{route('nosotros.index')}}" class="thm-btn btn-a" style="margin-top: 27px;">Leer mas</a>
                     
                     </div>
                 </div>

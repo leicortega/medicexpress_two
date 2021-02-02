@@ -1181,6 +1181,11 @@ li {
 
 .main-nav__header-one.two .stricked-menu .main-nav__main-navigation .main-nav__navigation-box>li>a {}
 
+.active{
+    background-color: var(--thm-primary);
+    color: #fff !important;
+}
+
 
 
 /*--------------------------------------------------------------
@@ -4663,7 +4668,7 @@ li {
     display: block;
 }
 .three_icons_list li .three_icons_box img{
-    width: 90px;
+    width: 100%;
 }
 
 .three_icons_list li .three_icons_box span {
@@ -5010,7 +5015,7 @@ li {
     height: 100%;
     width: 100%;
     content: "";
-    background: rgba(40, 47, 68, .80);
+    background: var(--thm-background);
 }
 
 .page-header-inner {
@@ -5833,6 +5838,11 @@ li {
     display: block;
     margin-left: 67px;
 }
+.about_page_left {
+    position: relative;
+    display: block;
+    margin-right: 67px;
+}
 
 .about_page_right .block-title {
     margin-bottom: 40px;
@@ -5851,7 +5861,7 @@ li {
 }
 
 .about_page_right_text p.second_text {
-    padding-top: 35px;
+    /* padding-top: 35px; */
     padding-bottom: 42px;
 }
 
