@@ -23,7 +23,7 @@
                             <p>From as low as $10 per day with limited time offer</p>
                         </div>
                         <div class="product-tab-box tabs-box">
-                            
+
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                         </div>
                      <div class="featured_properties_text">
                             <p>Somos un grupo de profesionales dedicados al servicio privado en el área de la
-                                 salud integral (medico/ambulatorio), salud ocupacional, jornadas preventivas de salud y consultorías en seguridad 
+                                 salud integral (medico/ambulatorio), salud ocupacional, jornadas preventivas de salud y consultorías en seguridad
                                  y salud a
                                  toda la comunidad, trabajadores independientes, contratistas y empresas. Brindando<b> CALIDAD Y SERVICIO</b>.
                             </p>
@@ -126,7 +126,7 @@
                             </li>
                         </ul>
                         <a href="#" class="thm-btn btn-a" style="margin-top: 27px;">Leer mas</a>
-                    
+
                     </div>
                 </div>
             </div>
@@ -391,7 +391,7 @@
                     </div>
                     <div class="col-xl-6">
                         <div class="comment_input_box">
-                            <input type="email" placeholder="Tema" name="Subject">
+                            <input type="email" placeholder="Asunto" name="Subject">
                             <i class="fab fa-buffer"></i>
                         </div>
                     </div>
@@ -472,7 +472,7 @@
         </div>
     </section>-->
     <!--Contact End-->
-    
+
     <!--Brand One Start-->
     <div class="brand_one">
         <div class="container">
