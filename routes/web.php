@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\homeController;
+use App\Http\Controllers\nosotrosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', homeController::class);
+Route::get('/', homeController::class)->name('index');
+
+Route::get('nosotros', [nosotrosController::class, 'index'])->name('nosotros.index');

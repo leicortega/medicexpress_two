@@ -111,15 +111,15 @@
                             <div class="main-nav__main-navigation one clearfix">
                                 <ul class=" main-nav__navigation-box float-left">
                                     <li>
-                                        <a href="http://localhost/medicexpress_two/public/">Inicio</a>
+                                        <a href="{{ route('index') }}" class="{{request()->routeIs('index') ? 'active' : ''}}">Inicio</a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#">Quienes somos</a>
+                                        <a href="{{ route('nosotros.index')}}" class="{{request()->routeIs('nosotros.index') ? 'active' : ''}}">Quienes somos</a>
                                         <ul>
-                                            <li><a href="#">Misión</a></li>
-                                            <li><a href="#">Visión</a></li>
-                                            <li><a href="#">Objetivos y principios</a></li>
-                                            <li><a href="#">Valores</a></li>
+                                            <li><a href="{{ route('nosotros.index')}}" >Misión</a></li>
+                                            <li><a href="{{ route('nosotros.index')}}" >Visión</a></li>
+                                            <li><a href="{{ route('nosotros.index')}}" >Objetivos y principios</a></li>
+                                            <li><a href="{{ route('nosotros.index')}}" >Valores</a></li>
                                         </ul><!-- /.sub-menu -->
                                     </li>
                                     <li class="dropdown">
@@ -134,7 +134,7 @@
                                         <a href="#">Blog</a>
                                     </li>
                                    
-                                    <li class="scroll-to-target" style="scroll-behavior: smooth;">
+                                    <li>
                                         <a href="#">Contactenos</a>
                                     </li>
                                 </ul>
