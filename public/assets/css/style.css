@@ -4164,13 +4164,17 @@ li {
 .why_choose_two {
     position: relative;
     display: block;
+    padding: 100px;
 }
 
 .why_choose_one_left {
     position: relative;
     display: block;
 }
-
+.service-1{
+    padding: 100px;
+    background: #f4f6fa;
+}
 .why_choose_two_bg {
     position: absolute;
     top: -112px;
@@ -4237,8 +4241,12 @@ li {
     display: block;
     margin-left: 88px;
 }
-
-.why_choose_right_img {}
+.letf-choose{
+    margin-right: 90px;
+}
+.why_choose_right_img {
+    margin-right: 90px;
+}
 
 .why_choose_right_img img {
     width: 100%;
