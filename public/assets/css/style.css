@@ -4245,7 +4245,8 @@ li {
     margin-right: 90px;
 }
 .why_choose_right_img {
-    margin-right: 90px;
+    margin-right: 147px;
+    margin-left: 88px;;
 }
 
 .why_choose_right_img img {
@@ -4322,7 +4323,22 @@ li {
 .blog_one.two .blog_one_img img {
     width: 100%;
 }
-
+.comment-form .comment_input_box input{
+    background: #eff1f6 !important;
+    height: 60px !important;
+    width: 100%;
+    border: none;
+    padding: 0 30px !important;
+    margin-bottom: 20px !important;
+    border-radius: 5px !important;
+    outline: none;
+    font-size: 14px;
+    color: var(--thm-gray);
+}
+.comment-form .comment_input_box textarea{
+    background: #eff1f6 !important;
+    border: none !important;
+}
 /*--------------------------------------------------------------
 # Brand Two
 --------------------------------------------------------------*/
@@ -4432,7 +4448,7 @@ li {
     height: 100%;
     width: 100%;
     content: "";
-    background: rgba(239, 241, 246, .96);
+    /* background: rgba(239, 241, 246, .96); */
     z-index: -1;
 }
 

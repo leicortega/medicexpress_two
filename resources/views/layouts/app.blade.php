@@ -131,7 +131,7 @@
                                         </ul><!-- /.sub-menu -->
                                     </li>
                                     <li>
-                                        <a href="#">Blog</a>
+                                        <a href="{{route('blog.index')}}" class="{{request()->routeIs('blog.index') ? 'enlace' : ''}}">Blog</a>
                                     </li>
                                    
                                     <li>
