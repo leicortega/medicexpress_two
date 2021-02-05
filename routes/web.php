@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\contactoController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\nosotrosController;
+use App\Http\Controllers\servicosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,3 +20,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', homeController::class)->name('index');
 
 Route::get('nosotros', [nosotrosController::class, 'index'])->name('nosotros.index');
+Route::get('servicios',[servicosController::class, 'servicios'])->name('servicios.index');
+Route::get('contacto', [contactoController::class, 'contacto'])->name('contacto');
