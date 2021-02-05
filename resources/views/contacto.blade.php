@@ -78,65 +78,59 @@
     </section>
     <!--Locations End-->
 
-    <!--Contact Start-->
-    <section class="contact">
+    <!--contact one-->
+    <section class="why_choose_one jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
+        style="background-image: url({{asset('assets/img/banner/fondo-form.jpg')}})">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-lg-4">
-                    <div class="block-title text-left">
-                        <h4>Contact Us</h4>
-                        <h2>Love to Hear From You</h2>
+        <div class="why_choose_one_title">
+            <h2>Contáctenos</h2>
+        </div>
+        <div class="why_choose_one_shape_one"
+            style="background-image: url({{asset('assets/img/shapes/why_choose_one_shape_1.png')}})">
+        </div>
+        <div class="col-xl-8 col-lg-8" style="margin: 0 auto;">
+            <form action="inc/sendemail.php" class="contact__form">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="comment_input_box">
+                            <input type="text" placeholder="Tu nombre" name="name">
+                            <i class="fas fa-user"></i>
+                        </div>
                     </div>
-                    <div class="contact_text">
-                        <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit sed do eiusm od tempor ut
-                            labore. sit amet scelerisque. Phasellus hendrerit neque a augue.</p>
-                    </div>
-                    <div class="contact__social">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook-square"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    <div class="col-xl-6">
+                        <div class="comment_input_box">
+                            <input type="email" placeholder="Dirección de correo electronico" name="email">
+                            <i class="far fa-envelope"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xl-8 col-lg-8">
-                    <form action="#" class="contact__form">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="comment_input_box">
-                                    <input type="text" placeholder="Nombre" name="name">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="comment_input_box">
-                                    <input type="email" placeholder="Correo" name="email">
-                                </div>
-                            </div>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="comment_input_box">
+                            <input type="text" placeholder="Numero de telefono" name="phone">
+                            <i class="fas fa-phone"></i>
                         </div>
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="comment_input_box">
-                                    <input type="text" placeholder="Telefono" name="phone">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="comment_input_box">
-                                    <input type="email" placeholder="Asunto" name="Subject">
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="comment_input_box">
+                            <input type="email" placeholder="Tema" name="Subject">
+                            <i class="fab fa-buffer"></i>
                         </div>
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="comment_input_box">
-                                    <textarea name="message" placeholder="Mensaje"></textarea>
-                                </div>
-                                <button type="submit" class="thm-btn comment-form__btn">Enviar</button>
-                            </div>
-                        </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="comment_input_box">
+                            <textarea name="message" placeholder="Escribir mensaje"></textarea>
+                        </div>
+                        <button type="submit" class="thm-btn  comment-form__btn btn-a">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
         </div>
     </section>
-    <!--Contact End-->
+    <!--contact one End-->
 
     <!--Google Map-->
     <section class="google_map">
