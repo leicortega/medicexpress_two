@@ -2463,7 +2463,7 @@ li {
 
 .why_choose_one_shape_one {
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 50%;
     width: 408px;
     height: 64px;
