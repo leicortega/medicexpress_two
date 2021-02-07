@@ -3,7 +3,7 @@
 
 @section('content')
 <!--Page Header Start-->
-    <section class="page-header" style="background-image: url({{asset('assets/img/about/about.jpg')}});">
+    <section class="page-header" style="background-image: url({{asset('assets/img/about/about.jpeg')}});">
         <div class="container">
             <div class="page-header-inner">
                 <h2>Servicios</h2>
@@ -90,7 +90,7 @@
     </section>
     <!--servicios img End-->
 
-    <!--Testimonials Two Start-->
+    <!--atencion-medica Start-->
     <section class="testimonials_two">
         <div class="container_box">
             <div class="block-title text-center">
@@ -165,9 +165,9 @@
             </div>
         </div>
     </section>
-    <!--Testimonials Two End-->
+    <!--atencion-medica End-->
 
-    <!--Why Choose One Start-->
+    <!--salud-ocupacional Start-->
     <section class="why_choose_two service-1">
         <div class="container">
             <div class="row">
@@ -214,10 +214,10 @@
             </div>
         </div>
     </section>
-    <!--Why Choose One End-->
+    <!--salud-ocupacional End-->
 
-    <!--CTA One Start-->
-    <section class="cta_one" data-jarallax data-speed="0.2" data-imgPosition="50% 0%" style="background-image: url({{asset('assets/img/about/fondo2.jpg')}})">
+    <!--cotizacion Start-->
+    <section class="cta_one" data-jarallax data-speed="0.2" data-imgPosition="50% 0%" style="background-image: url({{asset('assets/img/about/fondo2.jpeg')}})">
         {{-- <div class="cta_one_bg" style="background-image: url({{asset('assets/img/about/fondo2.jpg')}})"></div> --}}
         <div class="container">
             <div class="row">
@@ -234,9 +234,9 @@
             </div>
         </div>
     </section>
-    <!--CTA One End-->
+    <!--cotizacion End-->
 
-    <!--Testimonials Two Start-->
+    <!--consultorias Start-->
     <section class="testimonials_two">
         <div class="container_box">
             <div class="block-title text-center">
@@ -271,5 +271,5 @@
             </div>
         </div>
     </section>
-    <!--Testimonials Two End-->
+    <!--consultorias End-->
 @endsection

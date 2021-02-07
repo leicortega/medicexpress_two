@@ -3,7 +3,7 @@
 
 @section('content')
     <!--Page Header Start-->
-    <section class="page-header" style="background-image: url({{asset('assets/img/backgrounds/page-header_bg.jpg')}});">
+    <section class="page-header" style="background-image: url({{asset('assets/img/banner/contacto.jpeg')}});">
         <div class="container">
             <div class="page-header-inner">
                 <h2>Contácto</h2>
@@ -80,7 +80,7 @@
 
     <!--contact one-->
     <section class="why_choose_one jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-        style="background-image: url({{asset('assets/img/banner/fondo-form.jpg')}})">
+        style="background-image: url({{asset('assets/img/banner/fondo-form.jpeg')}})">
         <div class="container">
         <div class="why_choose_one_title">
             <h2>Contáctenos</h2>

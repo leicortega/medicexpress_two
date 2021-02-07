@@ -31,7 +31,7 @@
         </div>
     </section>
     <!--Banner Three Start-->
-    <!--Are You Ready Start-->
+    <!--service Start-->
     <section class="are_you_ready two jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
         style="background-image: url({{asset('assets/img/banner/5.jpeg')}})">
         <div class="container">
@@ -47,8 +47,8 @@
         </div>
         </div>
     </section>
-<!--Are You Ready End-->
-    <!--Three Icons Start-->
+    <!--service End-->
+    <!--servicios-->
     <section class="three_icons">
         <div class="container">
             <div class="row">
@@ -57,7 +57,7 @@
                         <ul class="three_icons_list clearfix list-unstyled">
                             <li>
                                 <div class="three_icons_box">
-                                    <img src="{{asset('assets/img/servicios/atencion-medica.jpg')}}" alt="" class="rounded">
+                                    <img src="{{asset('assets/img/servicios/atencion-medica.jpeg')}}" alt="" class="rounded">
                                 </div>
                                 <div class="three_icons_text">
                                     <h4>Atención medica</h4>
@@ -66,7 +66,7 @@
                             </li>
                             <li>
                                 <div class="three_icons_box">
-                                    <img src="{{asset('assets/img/servicios/salud-ocupacional.jpg')}}" alt="" class="rounded">
+                                    <img src="{{asset('assets/img/servicios/salud-ocupacional.jpeg')}}" alt="" class="rounded">
                                 </div>
                                 <div class="three_icons_text">
                                     <h4>Salud ocupacional</h4>
@@ -75,7 +75,7 @@
                             </li>
                             <li>
                                 <div class="three_icons_box">
-                                    <img src="{{asset('assets/img/servicios/consultorias.jpg')}}" alt="" class="rounded">
+                                    <img src="{{asset('assets/img/servicios/consultorias.jpeg')}}" alt="" class="rounded">
                                 </div>
                                 <div class="three_icons_text">
                                     <h4>Consultorias</h4>
@@ -88,7 +88,7 @@
             </div>
         </div>
     </section>
-    <!--Three Icons End-->
+    <!--servicios End-->
     <!--About us-->
     <section class="featured_properties jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
         style="background-image: url({{asset('assets/img/banner/14.jpeg')}})">
@@ -133,7 +133,7 @@
         </div>
     </section>
     <!--About us End-->
-    <!--Membership Plan Start-->
+    <!--planes Start-->
         <section class="membership_plan two">
             <div class="container">
                 <div class="block-title text-center">
@@ -201,7 +201,7 @@
                 </div>
             </div>
         </section>
-    <!--Membership Plan End-->
+    <!--planes End-->
     <!--Cotizar-->
         <section class="providing_one jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
             style="background-image: url({{asset('assets/img/banner/slider3.jpeg')}})">
@@ -358,7 +358,7 @@
     <!--Blog One End-->
     <!--contact one-->
     <section class="why_choose_one jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-        style="background-image: url({{asset('assets/img/banner/fondo-form.jpg')}})">
+        style="background-image: url({{asset('assets/img/banner/fondo-form.jpeg')}})">
         <div class="container">
         <div class="why_choose_one_title">
             <h2>Contáctenos</h2>
@@ -409,69 +409,4 @@
         </div>
     </section>
     <!--contact one End-->
-    <!--Contact Start-->
-    <!--<section class="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-lg-4">
-                    <div class="block-title text-left">
-                        <h4>--Contacto--</h4>
-                        <h2>Contáctanos</h2>
-                    </div>
-                    <div class="contact_text">
-                        <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit sed do eiusm od tempor ut
-                            labore. sit amet scelerisque. Phasellus hendrerit neque a augue.</p>
-                    </div>
-                    <div class="contact__social">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook-square"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="col-xl-8 col-lg-8">
-                    <form action="inc/sendemail.php" class="contact__form">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="comment_input_box">
-                                    <input type="text" placeholder="Tu nombre" name="name">
-                                    <i class="far fa-user"></i>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="comment_input_box">
-                                    <input type="email" placeholder="Dirección de correo electronico" name="email">
-                                    <i class="far fa-envelope"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="comment_input_box">
-                                    <input type="text" placeholder="Numero de telefono" name="phone">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="comment_input_box">
-                                    <input type="email" placeholder="Tema" name="Subject">
-                                    <i class="fab fa-buffer"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="comment_input_box">
-                                    <textarea name="message" placeholder="Escribir mensaje"></textarea>
-                                </div>
-                                <button type="submit" class="thm-btn  comment-form__btn btn-a">Enviar</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>-->
-    <!--Contact End-->
-    
-    
 @endsection
