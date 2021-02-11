@@ -3255,6 +3255,7 @@ li {
     overflow: hidden;
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
+    height: 322px;
 }
 
 .blog_one_img:before {

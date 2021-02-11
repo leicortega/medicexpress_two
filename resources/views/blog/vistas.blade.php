@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Blog - Medicexpress')
+@section('title', 'Blog - Medicexpress | '.$post->titulo)
 
 @section('content')
     <!--Page Header Start-->
@@ -25,14 +25,14 @@
                     <div class="news_details_left">
                         <div class="news_detials_img_box">
                             <div class="news_detials_img">
-                                <img src="{{asset('assets/img/blog/news_details_img_1.jpg')}}" alt="">
+                                <img src="http://127.0.0.1:8000/storage/{{ $post->imagen }}" alt="">
                             </div>
                             <div class="news_details_date_box">
                                 <p>20 Nov, 2020</p>
                             </div>
                         </div>
                         <div class="news_details_content_box">
-                            <h3><a href="news-details.html">Save Thousands Selling Your Property</a></h3>
+                            <h3 style="color: #000;">{{$post->titulo}}</h3>
                             <ul class="list-unstyled news_details__meta">
                                 <li><a href="#"><i class="far fa-user-circle"></i> Admin</a></li>
                                 <li><span>/</span></li>
@@ -40,25 +40,32 @@
                                 </li>
                             </ul>
                         </div>
+                        <!-- contenido -->
                         <div class="news_details_text">
-                            <p class="text_one">Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum.
-                                There are many variations of passages of Lorem Ipsum available, but the majority
-                                have alteration in some injected or words which don't look even slightly believable.
-                                If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
-                                anything embarrang hidden in the middle of text. All the Lorem Ipsum generators on
-                                the Internet tend to repeat predefined chunks as necessary, making this the first
-                                true generator on the Internet. It uses a dictionary of over 200 Latin words,
-                                combined with a handful of model sentence structures, to generate Lorem Ipsum which
-                                looks reasonable.</p>
-                            <p class="text_two">Lorem Ipsum has been the industry's standard dummy text ever since
-                                the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                                type simen book. It has survived not only five centuries, but also the leap into
-                                electronic typesetting.</p>
-                            <p class="text_three">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. orem Ipsum has been the industry's standard dummy text ever since the when
-                                an unknown printer took a galley of type and scrambled it to make a type specimen
-                                book. It has survived not only five centuries, but also the leap into unchanged.</p>
+                            <?php echo $post->contenido; ?>
                         </div>
+                        <!-- contenido end -->
+                        {{-- carrousel --}}
+                        <div class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner" style="height: 400px;">
+                                {{-- @foreach ($post->media_posts as $post_img)
+                                    <div class="carousel-item active ">
+                                        <img src="http://127.0.0.1:8000/storage/{{ $post_img->id  }}" alt="">
+                                    </div> 
+                                @endforeach --}}
+                                
+                                <div class="carousel-item active ">
+                                    <img src="{{asset('assets/img/banner/1.jpeg')}}" alt="">
+                                </div>       
+                                <div class="carousel-item ">
+                                    <img src="{{asset('assets/img/banner/3.jpeg')}}" alt="">
+                                </div>       
+                                <div class="carousel-item ">
+                                    <img src="{{asset('assets/img/banner/4.jpeg')}}" alt="">
+                                </div>                       
+                            </div>
+                        </div>
+                        {{-- carrouse end --}}
                         <div class="news_details__bottom">
                             <p class="news_details__tags">
                                 <span>Tags:</span>
@@ -110,9 +117,11 @@
                                 </div>
                             </div>
                         </div>
+                        {{-- realizar comentarios  --}}
                         <div class="comment-form">
                             <h3 class="comment-form__title">Realizar Comentario</h3>
-                            <form action="inc/sendemail.php" class="comment-one__form">
+                            <form action="#" class="comment-one__form" method="POST">
+                                @csrf
                                 <div class="row">
                                     <div class="col-xl-6">
                                         <div class="comment_input_box">
@@ -133,7 +142,7 @@
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="comment_input_box">
-                                            <input type="email" placeholder="Asunto" name="Subject">
+                                            <input type="text" placeholder="Asunto" name="Subject">
                                         </div>
                                     </div>
                                 </div>
@@ -147,6 +156,7 @@
                                 </div>
                             </form>
                         </div>
+                        {{-- realizar comentarios end --}}
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-5">

@@ -282,73 +282,30 @@
                     <div class="blog_one_right">
                         <div class="blog_one_carousel owl-theme owl-carousel">
                             <!--Blog One Single-->
-                            <div class="blog_one_single">
-                                <div class="blog_one_image_box">
-                                    <div class="blog_one_img">
-                                        <img src="{{asset('assets/img/blog/blog_1_img_1.jpg')}}" alt="">
+                            @foreach ($posts as $post)
+                                <div class="blog_one_single">
+                                    <div class="blog_one_image_box">
+                                        <div class="blog_one_img">
+                                            <img src="http://127.0.0.1:8000/storage/{{ $post->imagen }}" alt="">
+                                        </div>
+                                        <div class="blog_one_date_box">
+                                            <p>20 Nov, 2020</p>
+                                        </div>
                                     </div>
-                                    <div class="blog_one_date_box">
-                                        <p>20 Nov, 2020</p>
-                                    </div>
-                                </div>
-                                <div class="blog_one_content_box">
-                                    <h3><a href="news-details.html">Save Thousands Selling Your Property</a></h3>
-                                    <ul class="list-unstyled blog-one__meta">
-                                        <li><a href="blog-details.html"><i class="far fa-user-circle"></i> Admin</a>
-                                        </li>
-                                        <li><span>/</span></li>
-                                        <li><a href="news-details.html"><i class="far fa-comments"></i> 2
-                                                Comments</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--Blog One Single-->
-                            <div class="blog_one_single">
-                                <div class="blog_one_image_box">
-                                    <div class="blog_one_img">
-                                        <img src="{{asset('assets/img/blog/blog_1_img_2.jpg')}}" alt="">
-                                    </div>
-                                    <div class="blog_one_date_box">
-                                        <p>20 Nov, 2020</p>
+                                    <div class="blog_one_content_box">
+                                        <h3><a href="{{route('blog.vistas', $post->id)}}">{{$post->titulo}}</a></h3>
+                                        <ul class="list-unstyled blog-one__meta">
+                                            <li><a href="{{route('blog.vistas', $post->id)}}"><i class="far fa-user-circle"></i> Admin</a>
+                                            </li>
+                                            <li><span>/</span></li>
+                                            <li><a href="{{route('blog.vistas', $post->id)}}"><i class="far fa-comments"></i> 2
+                                                    Comments</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="blog_one_content_box">
-                                    <h3><a href="#">Leverage agile frame works to a
-                                            robust</a></h3>
-                                    <ul class="list-unstyled blog-one__meta">
-                                        <li><a href="#"><i class="far fa-user-circle"></i> Admin</a>
-                                        </li>
-                                        <li><span>/</span></li>
-                                        <li><a href="#"><i class="far fa-comments"></i> 2
-                                                Comments</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--Blog One Single-->
-                            <div class="blog_one_single">
-                                <div class="blog_one_image_box">
-                                    <div class="blog_one_img">
-                                        <img src="{{asset('assets/img/blog/blog_1_img_3.jpg')}}" alt="">
-                                    </div>
-                                    <div class="blog_one_date_box">
-                                        <p>20 Nov, 2020</p>
-                                    </div>
-                                </div>
-                                <div class="blog_one_content_box">
-                                    <h3><a href="#"> Iterative approaches to corporate
-                                            foster</a></h3>
-                                    <ul class="list-unstyled blog-one__meta">
-                                        <li><a href="#"><i class="far fa-user-circle"></i> Admin</a>
-                                        </li>
-                                        <li><span>/</span></li>
-                                        <li><a href="#"><i class="far fa-comments"></i> 2
-                                                Comments</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                            @endforeach
+                            <!--Blog One Single end-->
                         </div>
                     </div>
                 </div>
