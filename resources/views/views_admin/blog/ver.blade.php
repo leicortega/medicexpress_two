@@ -43,7 +43,7 @@
                                     </div>
                                 @endif
 
-                                <form action="/blog/post/crear" method="post" id="form_crear_post" enctype="multipart/form-data">
+                                <form action="/admin/blog/post/crear" method="post" id="form_crear_post" enctype="multipart/form-data">
                                     @csrf
 
                                     <h4 class="header-title">Actualizar Post</h4>

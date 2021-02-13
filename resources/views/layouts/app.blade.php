@@ -137,6 +137,9 @@
                                     <li>
                                         <a href="{{route('contacto')}}" class="{{request()->routeIs('contacto') ? 'enlace' : ''}}">Contactenos</a>
                                     </li>
+                                    <li>
+                                        <a href="{{route('admin')}}" target="_blank" >Admin</a>
+                                    </li>
                                 </ul>
                             </div><!-- /.navbar-collapse -->
                         </div>
@@ -265,7 +268,7 @@
                                 <li><a href="#">Servicios</a></li>
                                 <li><a href="#">Blog</a></li>
                                 <li><a href="#">Contácto</a></li>
-                                <li><a href="#">Soporte</a></li>
+                                <li><a href="{{route('admin')}}" target="_blank">Admin</a></li>
                             </ul>
                             <!--<ul class="footer_widget__explore_list two list-unstyled">
                                 <li><a href="#">Our Agents</a></li>

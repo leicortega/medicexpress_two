@@ -9,28 +9,51 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Media_post;
 use App\Models\Comment;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
+
 class blogController extends Controller
 {
+    public $date;
+
+    public function __construct() {
+        $this->date = Carbon::now('America/Bogota');
+        // $this->middleware('auth');
+    }
+
     public function index(){
         $posts = Post::paginate(10);
+
+        foreach ($posts as $key => $post) {
+            $post['author'] = User::find($post->users_id)->name;
+            $post['comments'] = Comment::where('posts_id', $post->id)->count();
+        }
 
         return view('blog.index', ['posts' => $posts]);
     }
 
-    public function vistas(Post $post,  Request $request){
-        // $post = Post::with('media_posts')->find($request['id']);
-        // $post = Post::find('id');
-        return view('blog.vistas', compact('post'));
+    public function vistas(Post $post, Comment $comment, Request $request){
+        $post['author'] = User::find($post->users_id)->name;
+        $posts = Post::latest()->take(3)->get();
+        // dd($posts);
+        return view('blog.vistas', compact('post'),compact('posts'));
     }
-    public function comment(post $post, Request $request){
 
-        $post_comment = new BlogComment();
-
-       $post_comment->nombre = $request->nombre;
-       $post_comment->correo = $request->correo;
-       $post_comment->contenido = $request->contenido;
-
-       $post_comment->save();
+    public function comment(Post $post, Comment $comment, Request $request){
+        
+        
+        $comment = Comment::create([
+            'fecha' => $this->date->format('Y-m-d'),
+            'nombre' => $request->nombre,
+            'correo' => $request->correo,
+            'contenido' => $request->contenido,
+            'posts_id' => $request->post_id
+        ]);
+        
+        
        return redirect()->route('blog.vistas', $post);
     }
+   
+
 }

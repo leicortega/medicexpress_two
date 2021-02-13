@@ -18,8 +18,8 @@ class AdminController extends Controller
 
     public function users() {
         $users = User::paginate(10);
-
-        return view('views_admin.admin.users', ['users' => $users]);
+        // ['users' => $users]
+        return view('views_admin.admin.users', compact('users'));
     }
 
     public function filtro(){
@@ -56,12 +56,12 @@ class AdminController extends Controller
         ]);
 
         if ($user->save()) {
-            if ($request['tipo'] == 'admin') {
-                $user->assignRole($request['tipo']);
-            } else {
-                $user->assignRole($request['tipo']);
-                $user->givePermissionTo($request['permisos']);
-            }
+            // if ($request['tipo'] == 'admin') {
+            //     $user->assignRole($request['tipo']);
+            // } else {
+            //     $user->assignRole($request['tipo']);
+            //     $user->givePermissionTo($request['permisos']);
+            // }
             return redirect()->route('users')->with('create', 1);
         } else {
             return redirect()->route('users')->with('create', 0);
@@ -69,20 +69,20 @@ class AdminController extends Controller
 
     }
 
-    public function showUser(Request $request) {
-        $user = User::find($request['id']);
-        $permisos = array();
+    // public function showUser(Request $request) {
+    //     $user = User::find($request['id']);
+    //     $permisos = array();
 
-        foreach ($user->permissions as $permiso) {
-            array_push($permisos, $permiso->name);
-        }
+    //     foreach ($user->permissions as $permiso) {
+    //         array_push($permisos, $permiso->name);
+    //     }
 
-        return [
-            'user' => $user,
-            'rol' => $user->roles()->first()->name,
-            'permisos' => $permisos
-        ];
-    }
+    //     return [
+    //         'user' => $user,
+    //         'rol' => $user->roles()->first()->name,
+    //         'permisos' => $permisos
+    //     ];
+    // }
 
     public function updateUser(Request $request) {
 
@@ -101,15 +101,15 @@ class AdminController extends Controller
             'estado' => $request['estado'],
         ]);
 
-        if ($request['tipo'] == 'admin') {
-            $user->assignRole($request['tipo']);
-            $user->removeRole('general');
-        } else {
-            $user->assignRole($request['tipo']);
-            $user->removeRole('admin');
-            $user->revokePermissionTo(Permission::all());
-            $user->givePermissionTo($request['permisos']);
-        }
+        // if ($request['tipo'] == 'admin') {
+        //     $user->assignRole($request['tipo']);
+        //     $user->removeRole('general');
+        // } else {
+        //     $user->assignRole($request['tipo']);
+        //     $user->removeRole('admin');
+        //     $user->revokePermissionTo(Permission::all());
+        //     $user->givePermissionTo($request['permisos']);
+        // }
         return redirect()->route('users')->with('update', 1);
 
     }

@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Route;
 // Controladores Panel Administrador
 // use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\AdminController;
+use Illuminate\Support\Facades\Auth;
+
 // use App\Http\Controllers\Admin\BlogController;
 
 /*
@@ -33,13 +35,13 @@ Route::get('contacto', [contactoController::class, 'contacto'])->name('contacto'
 // rutas blog
 Route::get('blog', [blogController::class, 'index'])->name('blog.index');
 Route::get('blog/{post}', [blogController::class, 'vistas'])->name('blog.vistas');
-Route::post('blog/{post}', [blogController::class, 'comment'])->name('blog.comment');
+Route::post('blog/{post}/edit', [blogController::class, 'comment'])->name('blog.comment');
 
 
 
 // RUTAS PARA PANEL ADMINISTRADOR
 
-Route::get('/admin', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('index');
+Route::get('/admin', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin');
 
 // Rutas para administrador
 Route::get('/admin/users', [App\Http\Controllers\Admin\AdminController::class, 'users'])->name('users');

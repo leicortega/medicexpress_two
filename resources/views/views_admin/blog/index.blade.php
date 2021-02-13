@@ -56,7 +56,7 @@
                                                 <td>{{ Carbon\Carbon::parse($post->fecha)->format('d-m-Y') }}</td>
                                                 <td>{{ $post->titulo }}</td>
                                                 <td class="text-center">
-                                                    <a href="/blog/post/ver/{{ $post->id }}"><button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Ver Post">
+                                                    <a href="/admin/blog/post/ver/{{ $post->id }}"><button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Ver Post">
                                                         <i class="mdi mdi-eye"></i>
                                                     </button></a>
                                                     <a href="javascript:eliminar_post({{ $post->id }})"><button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Elinimar Post" style="margin-left: 2px">

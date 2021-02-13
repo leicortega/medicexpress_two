@@ -15,6 +15,6 @@ $(window).ready(function () {
 
 function eliminar_post(id) {
     if (confirm('Seguro desea eliminar el post?')) {
-        window.location.href = '/blog/post/delete/'+id;
+        window.location.href = '/admin/blog/post/delete/'+id;
     }
 }

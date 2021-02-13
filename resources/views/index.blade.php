@@ -286,10 +286,10 @@
                                 <div class="blog_one_single">
                                     <div class="blog_one_image_box">
                                         <div class="blog_one_img">
-                                            <img src="http://127.0.0.1:8000/storage/{{ $post->imagen }}" alt="">
+                                            <img src="{{ \Storage::url($post->imagen) }}" alt="">
                                         </div>
                                         <div class="blog_one_date_box">
-                                            <p>20 Nov, 2020</p>
+                                            <p>{{$post->fecha}}</p>
                                         </div>
                                     </div>
                                     <div class="blog_one_content_box">

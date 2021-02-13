@@ -10,7 +10,7 @@
                 <li class="menu-title">Menu</li>
 
                 <li class="mb-3">
-                    <a href="/" class="waves-effect">
+                    <a href="/admin" class="waves-effect">
                         <div class="d-inline-block icons-sm mr-1 uim-icon-primary"><i class="uim uim-airplay"></i></div>
                         <span class="text-dark">Escritorio</span>
                     </a>
@@ -34,7 +34,7 @@
                         <li class="menu-title">Administrador</li>
 
                         <li>
-                            <a href="admin/users" class="waves-effect">
+                            <a href="/admin/users" class="waves-effect">
                                 <div class="d-inline-block icons-sm mr-1"><i class="uim uim-object-group"></i></div>
                                 <span>Usuarios</span>
                             </a>

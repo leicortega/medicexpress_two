@@ -97,7 +97,7 @@
                                             <th scope="col">Identificacion</th>
                                             <th scope="col">Correo</th>
                                             <th scope="col">Estado</th>
-                                            <th scope="col">Tipo</th>
+                                            {{-- <th scope="col">Tipo</th> --}}
                                             <th scope="col">Acciones</th>
                                         </tr>
                                     </thead>
@@ -111,7 +111,7 @@
                                                 <td>{{ $user->identificacion }}</td>
                                                 <td>{{ $user->email }}</td>
                                                 <td>{{ $user->estado }}</td>
-                                                <td>{{ $user->roles()->first()->name }}</td>
+                                                {{-- <td>{{ $user->roles()->first()->name }}</td> --}}
                                                 <td class="text-center">
                                                     <button type="button" class="btn btn-outline-secondary btn-sm" onclick="showUser({{ $user->id }}, this)" data-toggle="tooltip" data-placement="top" title="Editar Usuario">
                                                         <i class="mdi mdi-pencil"></i>
@@ -188,7 +188,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group row">
+                    {{-- <div class="form-group row">
                         <label for="tipo" class="col-sm-2 col-form-label">Tipo</label>
                         <div class="col-sm-10">
                             <select name="tipo" class="form-control" onchange="selectTipo(this.value)" required>
@@ -197,7 +197,7 @@
                                 <option value="general">general</option>
                             </select>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="form-group row d-none divPermisos">
                         <label for="permiso" class="col-sm-2 col-form-label">Permiso</label>

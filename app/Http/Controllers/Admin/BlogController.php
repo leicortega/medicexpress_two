@@ -93,8 +93,8 @@ class BlogController extends Controller
    
     public function ver(Request $request) {
         $post = Post::with('media_posts')->find($request['id']);
-        
-        return view('views_admin.blog.ver', ['post' => $post]);
+        // ['post' => $post]
+        return view('views_admin.blog.ver', compact('post'));
     }
 
     public function delete($id) {
