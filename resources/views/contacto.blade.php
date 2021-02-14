@@ -89,17 +89,18 @@
             style="background-image: url({{asset('assets/img/shapes/why_choose_one_shape_1.png')}})">
         </div>
         <div class="col-xl-8 col-lg-8" style="margin: 0 auto;">
-            <form action="inc/sendemail.php" class="contact__form">
+            <form action="{{route('contacto.store')}}" class="contact__form" method="POST">
+                @csrf
                 <div class="row">
                     <div class="col-xl-6">
                         <div class="comment_input_box">
-                            <input type="text" placeholder="Tu nombre" name="name">
+                            <input type="text" placeholder="Tu nombre" name="nombre">
                             <i class="fas fa-user"></i>
                         </div>
                     </div>
                     <div class="col-xl-6">
                         <div class="comment_input_box">
-                            <input type="email" placeholder="Dirección de correo electronico" name="email">
+                            <input type="email" placeholder="Dirección de correo electronico" name="correo">
                             <i class="far fa-envelope"></i>
                         </div>
                     </div>
@@ -107,13 +108,13 @@
                 <div class="row">
                     <div class="col-xl-6">
                         <div class="comment_input_box">
-                            <input type="text" placeholder="Numero de telefono" name="phone">
+                            <input type="text" placeholder="Numero de telefono" name="telefono">
                             <i class="fas fa-phone"></i>
                         </div>
                     </div>
                     <div class="col-xl-6">
                         <div class="comment_input_box">
-                            <input type="email" placeholder="Tema" name="Subject">
+                            <input type="text" placeholder="Tema" name="asunto">
                             <i class="fab fa-buffer"></i>
                         </div>
                     </div>
@@ -121,12 +122,17 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="comment_input_box">
-                            <textarea name="message" placeholder="Escribir mensaje"></textarea>
+                            <textarea name="mensaje" placeholder="Escribir mensaje"></textarea>
                         </div>
                         <button type="submit" class="thm-btn  comment-form__btn btn-a">Enviar</button>
                     </div>
                 </div>
             </form>
+            @if (session('info'))
+                <script>
+                    alert("{{session('info')}}");
+                </script>
+            @endif
         </div>
         </div>
     </section>

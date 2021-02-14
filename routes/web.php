@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use Illuminate\Support\Facades\Auth;
 
+
 // use App\Http\Controllers\Admin\BlogController;
 
 /*
@@ -32,6 +33,7 @@ Route::get('nosotros', [nosotrosController::class, 'index'])->name('nosotros.ind
 Route::get('servicios',[servicosController::class, 'servicios'])->name('servicios.index');
 // ruta contacto
 Route::get('contacto', [contactoController::class, 'contacto'])->name('contacto');
+Route::post('contacto', [contactoController::class, 'store'])->name('contacto.store');
 // rutas blog
 Route::get('blog', [blogController::class, 'index'])->name('blog.index');
 Route::get('blog/{post}', [blogController::class, 'vistas'])->name('blog.vistas');
@@ -61,6 +63,7 @@ Route::post('/admin/blog/post/crear', [App\Http\Controllers\Admin\BlogController
 Route::get('/admin/blog/post/ver/{id}', [App\Http\Controllers\Admin\BlogController::class, 'ver']);
 Route::get('/admin/blog/post/delete/{id}', [App\Http\Controllers\Admin\BlogController::class, 'delete'])->name('post.delete');
 Route::get('/admin/blog/post/delete/media/{id}', [App\Http\Controllers\Admin\BlogController::class, 'delete_media']);
+
 
 Auth::routes(['register' => false]);
 
