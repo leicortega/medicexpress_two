@@ -69,20 +69,20 @@ class AdminController extends Controller
 
     }
 
-    // public function showUser(Request $request) {
-    //     $user = User::find($request['id']);
-    //     $permisos = array();
+    public function showUser(Request $request) {
+        $user = User::find($request['id']);
+        // $permisos = array();
 
-    //     foreach ($user->permissions as $permiso) {
-    //         array_push($permisos, $permiso->name);
-    //     }
+        // foreach ($user->permissions as $permiso) {
+        //     array_push($permisos, $permiso->name);
+        // }
 
-    //     return [
-    //         'user' => $user,
-    //         'rol' => $user->roles()->first()->name,
-    //         'permisos' => $permisos
-    //     ];
-    // }
+        // return [
+        //     'user' => $user,
+        //     'rol' => $user->roles()->first()->name,
+        //     'permisos' => $permisos
+        // ];
+    }
 
     public function updateUser(Request $request) {
 

@@ -227,7 +227,7 @@
                             <h2>Puedes Realizar Tu Cotización Sin Problemas</h2>
                         </div>
                         <div class="cta_one_btn">
-                            <a href="listing-1.html" class="thm-btn">Cotizar</a>
+                            <a href="listing-1.html" class="thm-btn" data-toggle="modal" data-target="#cotizar">Cotizar</a>
                         </div>
                     </div>
                 </div>

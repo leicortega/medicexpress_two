@@ -57,7 +57,7 @@
                         <div class="are_you_ready_shape"><img src="{{asset('assets/img/shapes/are_you_ready_shape.png')}}"
                             alt=""></div>
                      <h2>¿Que esperas para unirte?</h2>
-                     <a href="listing-1.html" class="thm-btn">Cotizar ahora</a>
+                     <a href="listing-1.html" class="thm-btn" data-toggle="modal" data-target="#cotizar">Cotizar ahora</a>
                     </div>
                 </div>
             </div>
