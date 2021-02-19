@@ -23,6 +23,7 @@
     <link href="{{ asset('assets_admin/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="{{ asset('assets_admin/css/app.min.css') }}" rel="stylesheet" type="text/css" />
+    
 
     @yield('MainCSS')
 

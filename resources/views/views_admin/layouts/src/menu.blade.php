@@ -29,6 +29,7 @@
                         </li>
                     {{-- @endcanany
 
+
                     @canany(['universal']) --}}
 
                         <li class="menu-title">Administrador</li>
@@ -41,6 +42,26 @@
                         </li>
 
                     {{-- @endcanany --}}
+
+                @endif
+
+                @if ( Request::is('admin/blog') || Request::is('admin/blog/*') )
+
+                    <li class="menu-title">Blog</li>
+
+                    <li>
+                        <a href="/admin/blog" class="waves-effect">
+                            <div class="d-inline-block icons-sm"></div>
+                            <span>Lista Posts</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/admin/blog/post/crear"  class="waves-effect">
+                            <div class="d-inline-block icons-sm"></div>
+                            <span>Crear</span>
+                        </a>
+                    </li>
 
                 @endif
 

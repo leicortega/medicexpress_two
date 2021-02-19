@@ -23,7 +23,7 @@ class blogController extends Controller
     }
 
     public function index(){
-        $posts = Post::paginate(10);
+        $posts = Post::paginate(9);
 
         foreach ($posts as $key => $post) {
             $post['author'] = User::find($post->users_id)->name;
