@@ -10,34 +10,35 @@ function showUser(id, btn) {
         url: '/admin/users/show/'+id,
         type: 'get',
         success: function (data) {
+            console.log(data);
             $('#modal-blade').modal('show');
-            $('#modal-blade-title').html(data.user.name);
+            $('#modal-blade-title').html(data.name);
 
             var content = `
 
                 <form action="/admin/users/update" method="POST" onsubmit="cargarbtn('#actual_btn_sumie')">
 
                     <input type="hidden" name="_token" value="${$('meta[name="csrf-token"]').attr('content')}">
-                    <input type="hidden" name="id" value="${data.user.id}">
+                    <input type="hidden" name="id" value="${data.id}">
 
                     <div class="form-group row">
                         <label for="name" class="col-sm-2 col-form-label">Nombre</label>
                         <div class="col-sm-10">
-                            <input class="form-control" type="text" name="name" placeholder="Escriba el nombre" value="${data.user.name}" required />
+                            <input class="form-control" type="text" name="name" placeholder="Escriba el nombre" value="${data.name}" required />
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="identificacion" class="col-sm-2 col-form-label">Identificacion</label>
                         <div class="col-sm-10">
-                            <input class="form-control" type="number" name="identificacion" placeholder="Escriba la identificacion" value="${data.user.identificacion}" required />
+                            <input class="form-control" type="number" name="identificacion" placeholder="Escriba la identificacion" value="${data.identificacion}" required />
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="email" class="col-sm-2 col-form-label">Correo (opcional)</label>
                         <div class="col-sm-10">
-                            <input class="form-control" type="email" name="email" placeholder="Escriba el correo" value="${(data.user.email) ? data.user.email : ''}" />
+                            <input class="form-control" type="email" name="email" placeholder="Escriba el correo" value="${(data.email) ? data.email : ''}" />
                         </div>
                     </div>
 
@@ -46,8 +47,8 @@ function showUser(id, btn) {
                         <div class="col-sm-10">
                             <select name="estado" id="estado" class="form-control" required>
                                 <option value="">Seleccione el estado</option>
-                                <option value="Activo">Activo</option>
-                                <option value="Inactivo">Inactivo</option>
+                                <option value="Activo" ${data.estado == 'Activo' ? 'selected' : ''}>Activo</option>
+                                <option value="Inactivo" ${data.estado == 'Inactivo' ? 'selected' : ''}>Inactivo</option>
                             </select>
                         </div>
                     </div>
@@ -56,43 +57,6 @@ function showUser(id, btn) {
                         <label for="password" class="col-sm-2 col-form-label">Contraseña</label>
                         <div class="col-sm-10">
                             <input class="form-control" type="password" name="password" placeholder="Escriba la contraseña" />
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="tipo" class="col-sm-2 col-form-label">Tipo</label>
-                        <div class="col-sm-10">
-                            <select name="tipo" id="tipo" id="tipo" class="form-control" onchange="selectTipo(this.value)" required>
-                                <option value="">Seleccione el tipo</option>
-                                <option value="admin">admin</option>
-                                <option value="general">general</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group row ${(data.rol == 'admin') ? 'd-none' : ''} divPermisos">
-                        <label for="permiso" class="col-sm-2 col-form-label">Permiso</label>
-                        <div class="col-sm-10 mt-2">
-                            <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="custom-control-input" id="custominlineCheck11" name="permisos[]" value="universal" ${data.permisos.includes('universal') ? 'checked=""' : ''}>
-                                <label class="custom-control-label" for="custominlineCheck11">Universal</label>
-                            </div>
-                            <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="custom-control-input" id="custominlineCheck22" name="permisos[]" value="correos" ${data.permisos.includes('correos') ? 'checked=""' : ''}>
-                                <label class="custom-control-label" for="custominlineCheck22">Correos</label>
-                            </div>
-                            <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="custom-control-input" id="custominlineCheck33" name="permisos[]" value="cotizaciones" ${data.permisos.includes('cotizaciones') ? 'checked=""' : ''}>
-                                <label class="custom-control-label" for="custominlineCheck33">Cotizaciones</label>
-                            </div>
-                            <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="custom-control-input" id="custominlineCheck44" name="permisos[]" value="control ingreso" ${data.permisos.includes('control ingreso') ? 'checked=""' : ''}>
-                                <label class="custom-control-label" for="custominlineCheck44">Control ingreso</label>
-                            </div>
-                            <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="custom-control-input" id="custominlineCheck55" name="permisos[]" value="vehiculos" ${data.permisos.includes('vehiculos') ? 'checked=""' : ''}>
-                                <label class="custom-control-label" for="custominlineCheck55">Vehiculos</label>
-                            </div>
                         </div>
                     </div>
 

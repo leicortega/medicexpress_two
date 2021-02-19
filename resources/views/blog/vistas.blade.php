@@ -34,9 +34,9 @@
                         <div class="news_details_content_box">
                             <h3 style="color: #000;">{{ $post->titulo }}</h3>
                             <ul class="list-unstyled news_details__meta">
-                                <li><a href="#"><i class="far fa-user-circle"></i>{{$post->author}}</a></li>
+                                <li><a href="#"><i class="far fa-user-circle"></i> {{$post->author}}</a></li>
                                 <li><span>/</span></li>
-                                <li><a href="#"><i class="far fa-comments"></i>2 Comments</a>
+                                <li><a href="#"><i class="far fa-comments"></i> {{$post->comments->count()}} Comentarios</a>
                                 </li>
                             </ul>
                         </div>
@@ -146,7 +146,7 @@
                             </div>
                         </div> --}}
                         <div class="comment-one">
-                            <h3 class="comment-one__title">{{$post->comment}} Comments</h3>
+                            <h3 class="comment-one__title">{{$post->comments->count()}} Comentarios</h3>
 
                             @foreach ($post->comments as $comment)
                                 <div class="comment-one__single">
@@ -217,7 +217,7 @@
                                         <div class="sidebar__post-content">
                                             <h3>
                                                 <a href="#" class="sidebar__post-content_meta"><i
-                                                        class="far fa-comments"></i>2 Comentarios</a>
+                                                        class="far fa-comments"></i>{{$post->comments->count()}} Comentarios</a>
                                                 <a href="{{route('blog.vistas', $post)}}">{{$post->titulo}}</a>
                                             </h3>
                                         </div>

@@ -139,7 +139,7 @@
                             <h2>Conoce nuestros servicos</h2>
                         </div>
                         <div class="cta_one_btn">
-                            <a href="listing-1.html" class="thm-btn">Leer mas</a>
+                            <a href="{{route('servicios.index')}}" class="thm-btn">Leer mas</a>
                         </div>
                     </div>
                 </div>

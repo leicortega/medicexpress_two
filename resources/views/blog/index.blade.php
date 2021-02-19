@@ -36,9 +36,9 @@
                             <div class="blog_one_content_box">
                                 <h3><a href="{{route('blog.vistas', $post)}}">{{$post->titulo}}</a></h3>
                                 <ul class="list-unstyled blog-one__meta">
-                                    <li><a href="{{route('blog.vistas', $post)}}"><i class="far fa-user-circle"></i>{{$post->author}}</a></li>
+                                    <li><a href="{{route('blog.vistas', $post)}}"><i class="far fa-user-circle"></i> {{$post->author}}</a></li>
                                     <li><span>/</span></li>
-                                    <li><a href="{{route('blog.vistas', $post)}}"><i class="far fa-comments"></i>{{$post->comments}} Commentarios</a>
+                                    <li><a href="{{route('blog.vistas', $post)}}"><i class="far fa-comments"></i> {{$post->comments}} Comentarios</a>
                                     </li>
                                 </ul>
                             </div>
