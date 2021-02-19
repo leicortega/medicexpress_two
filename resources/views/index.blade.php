@@ -366,8 +366,7 @@
         </div>
         </div>
     </section>
-    <!--contact one End-->
+    <!--contact End-->
 
-    
 
 @endsection
