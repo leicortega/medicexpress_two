@@ -43,8 +43,18 @@
                                         Ocurrio un error, contacte al desarrollador.
                                     </div>
                                 @endif
+                                @if (session()->has('delete') && session('delete') == 1)
+                                    <div class="alert alert-success">
+                                       {{ session('mensaje') }}
+                                    </div>
+                                @endif
+                                @if (session()->has('delete') && session('delete') == 0)
+                                    <div class="alert alert-danger">
+                                        {{ session('mensaje') }}
+                                    </div>
+                                @endif
 
-                                <a href="{{ route('index') }}"><button type="button" class="btn btn-dark btn-lg mb-2" onclick="cargarbtn(this)">Atras</button></a>
+                                <a href="{{ route('admin') }}"><button type="button" class="btn btn-dark btn-lg mb-2" onclick="cargarbtn(this)">Atras</button></a>
 
                                 {{-- botones de filtro --}}
                                 @if(request()->routeIs('users_filtro'))
@@ -116,6 +126,9 @@
                                                     <button type="button" class="btn btn-outline-secondary btn-sm" onclick="showUser({{ $user->id }}, this)" data-toggle="tooltip" data-placement="top" title="Editar Usuario">
                                                         <i class="mdi mdi-pencil"></i>
                                                     </button>
+                                                    <a href="javascript:eliminar_usuario({{ $user->id }})"><button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Eliminar Usuario" style="margin-left: 2px">
+                                                        <i class="mdi mdi-delete"></i>
+                                                    </button></a>
                                                 </td>
                                             </tr>
                                         @endforeach

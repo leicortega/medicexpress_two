@@ -31,6 +31,10 @@
                                         {{ session('mensaje') }}
                                     </div>
                                 @endif
+                            
+
+                                <a href="{{ route('admin') }}"><button type="button" class="btn btn-dark btn-lg mb-2" onclick="cargarbtn(this)">Atras</button></a>
+
 
                                 <a href="/admin/blog/post/crear" class="btn btn-primary btn-lg float-right mb-2">Agregar +</a>
 
@@ -59,7 +63,7 @@
                                                     <a href="/admin/blog/post/ver/{{ $post->id }}"><button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Ver Post">
                                                         <i class="mdi mdi-eye"></i>
                                                     </button></a>
-                                                    <a href="javascript:eliminar_post({{ $post->id }})"><button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Elinimar Post" style="margin-left: 2px">
+                                                    <a href="javascript:eliminar_post({{ $post->id }})"><button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Eliminar Post" style="margin-left: 2px">
                                                         <i class="mdi mdi-delete"></i>
                                                     </button></a>
                                                 </td>

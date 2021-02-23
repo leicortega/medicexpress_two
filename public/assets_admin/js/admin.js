@@ -9,3 +9,9 @@ function eliminar_documentos_vehiculo(id, btn){
         window.location.href = '/admin/sistema/eliminar_documento_vehiculo/'+id;
     }
 }
+
+function eliminar_usuario(id){
+    if(confirm('Seguro desea eliminar este usuario?')){
+        window.location.href = '/admin/users/delete/'+id;
+    }
+}

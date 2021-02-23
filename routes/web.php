@@ -51,6 +51,7 @@ Route::get('/admin/users/filtro', [App\Http\Controllers\Admin\AdminController::c
 Route::post('/admin/users/create', [App\Http\Controllers\Admin\AdminController::class, 'createUser'])->name('user-create');
 Route::get('/admin/users/show/{id}', [App\Http\Controllers\Admin\AdminController::class, 'showUser'])->name('user-show');
 Route::post('/admin/users/update', [App\Http\Controllers\Admin\AdminController::class, 'updateUser'])->name('user-update');
+Route::get('/admin/users/delete/{id}', [App\Http\Controllers\Admin\AdminController::class, 'deleteUser'])->name('user-delete');
 // Administrar Cargos
 // Route::get('/admin/sistema/cargos', 'AdminController@cargos')->name('cargos');
 // Route::post('/admin/sistema/agg_cargo', 'AdminController@agg_cargo');

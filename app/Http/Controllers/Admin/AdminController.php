@@ -113,5 +113,13 @@ class AdminController extends Controller
         return redirect()->route('users')->with('update', 1);
 
     }
+    public function deleteUser($id){
+
+        if($user = User::find($id)->delete()) {
+            return redirect()->back()->with(['delete' => 1, 'mensaje' => 'El Usuario se elimino correctamente']);
+        } else {
+            return redirect()->back()->with(['delete' => 0, 'mensaje' => 'El Usuario NO se elimino correctamente']);
+        }
+    }
 
 }

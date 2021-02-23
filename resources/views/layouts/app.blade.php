@@ -301,10 +301,10 @@
                                 <h3>Explorar</h3>
                             </div>
                             <ul class="footer_widget__explore_list list-unstyled">
-                                <li><a href="#">Sobre nosotros</a></li>
-                                <li><a href="#">Servicios</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contácto</a></li>
+                                <li><a href="{{route('nosotros.index')}}">Sobre nosotros</a></li>
+                                <li><a href="{{route('servicios.index')}}">Servicios</a></li>
+                                <li><a href="{{route('blog.index')}}">Blog</a></li>
+                                <li><a href="{{route('contacto')}}">Contácto</a></li>
                                 <li><a href="{{route('admin')}}" target="_blank">Admin</a></li>
                             </ul>
                             <!--<ul class="footer_widget__explore_list two list-unstyled">
@@ -344,7 +344,7 @@
                 <div class="col-xl-12">
                     <div class="site_footer_inner">
                         <div class="site_footer_left">
-                            <p>© Copyright 2021 by <a href="#">medicexpress</a></p>
+                            <p>© Copyright 2021 by <a href="{{route('index')}}">medicexpress</a></p>
                         </div>
                         <div class="site_footer__social">
                             <a href="#"><i class="fab fa-twitter"></i></a>
