@@ -137,7 +137,7 @@
         <section class="membership_plan two">
             <div class="container">
                 <div class="block-title text-center">
-                    <h4 class="h4">--Planes--</h4>
+                    <h4 class="h4">--Ofertas--</h4>
                     <h2>Promociones</h2>
                 </div>
                 <div class="row">
@@ -160,25 +160,29 @@
                             </div>
                         </div>
                     </div> --}}
-                    <div class="col-xl-10 col-lg-10" style="margin: auto;">
-                        <!--Membership Plan Single-->
-                        <div class="membership_plan_single wow fadeInUp" data-wow-delay="200ms">
-                            <div class="membership_plan_icon">
-                                <span class="icon-house"></span>
-                            </div>
-                            <div class="membership_plan_price">
-                                <p>Professional</p>
-                                <h2>$30.00</h2>
-                            </div>
-                            <ul class="membership_plan_serivce_list list-unstyled">
-                                <li><span class="fa fa-check"></span>20 Listings</li>
-                                <li><span class="fa fa-check"></span>6 Featured Listings</li>
-                            </ul>
-                            <div class="membership_plan_btn">
-                                <a href="#" class="thm-btn">Choose Plan</a>
+                    @foreach ($promociones as $promocion)
+                        <div class="col-xl-8 col-lg-8" style="margin: auto;">
+                            <!--Membership Plan Single-->
+                            <div class="membership_plan_single wow fadeInUp" data-wow-delay="200ms">
+                                <div class="membership_plan_icon">
+                                    {{-- <span class="icon-house"></span> --}}
+                                    <img class="rounded-circle" src="{{\Storage::url($promocion->imagen)}}" alt="" style="width: 130px; height: 130px;">
+                                </div>
+                                <div class="membership_plan_price">
+                                    <p>{{$promocion->titulo}}</p>
+                                    <h2>${{$promocion->precio}}</h2>
+                                </div>
+                                <ul class="membership_plan_serivce_list list-unstyled">
+                                    <li><span class="fa fa-check"></span>{{$promocion->descripcion}}</li>
+                                    {{-- <li><span class="fa fa-check"></span>6 Featured Listings</li> --}}
+                                </ul>
+                                <div class="membership_plan_btn">
+                                    <a href="{{route('contacto')}}" class="thm-btn">Contácto</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
+                    {{-- {{ $promociones->links() }} --}}
                     {{-- <div class="col-xl-4 col-lg-4">
                         <!--Membership Plan Single-->
                         <div class="membership_plan_single wow fadeInUp" data-wow-delay="300ms">

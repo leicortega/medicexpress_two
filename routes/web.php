@@ -64,6 +64,12 @@ Route::post('/admin/blog/post/crear', [App\Http\Controllers\Admin\BlogController
 Route::get('/admin/blog/post/ver/{id}', [App\Http\Controllers\Admin\BlogController::class, 'ver']);
 Route::get('/admin/blog/post/delete/{id}', [App\Http\Controllers\Admin\BlogController::class, 'delete'])->name('post.delete');
 Route::get('/admin/blog/post/delete/media/{id}', [App\Http\Controllers\Admin\BlogController::class, 'delete_media']);
+//Rutas para promociones
+Route::get('/admin/promociones', [App\Http\Controllers\Admin\PromocionesController::class, 'index'])->name('admin.promociones');
+Route::post('/admin/promociones/crear', [App\Http\Controllers\Admin\PromocionesController::class, 'store'])->name('promociones-store');
+Route::get('/admin/promociones/show/{id}', [App\Http\Controllers\Admin\PromocionesController::class, 'show'])->name('promociones-show');
+Route::post('/admin/promociones/update', [App\Http\Controllers\Admin\PromocionesController::class, 'update'])->name('promociones-update');
+Route::get('/admin/promociones/delete/{id}', [App\Http\Controllers\Admin\PromocionesController::class, 'delete'])->name('promociones-delete');
 
 
 Auth::routes(['register' => false]);

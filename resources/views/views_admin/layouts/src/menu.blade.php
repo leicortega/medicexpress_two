@@ -27,6 +27,15 @@
                                 <span>Blog</span>
                             </a>
                         </li>
+
+                    <li class="menu-title">Landing Page</li>
+                        <li>
+                            <a href="/admin/promociones" class="waves-effect">
+                                <div class="d-inline-block icons-sm mr-1"><i class="uim uim-bookmark"></i></div>
+                                <span>Promociones</span>
+                            </a>
+                            
+                        </li>
                     {{-- @endcanany
 
 
@@ -58,6 +67,26 @@
 
                     <li>
                         <a href="/admin/blog/post/crear"  class="waves-effect">
+                            <div class="d-inline-block icons-sm"></div>
+                            <span>Crear</span>
+                        </a>
+                    </li>
+
+                @endif
+
+                @if ( Request::is('admin/promociones') || Request::is('admin/promociones/*') )
+
+                    <li class="menu-title">Promociones</li>
+
+                    <li>
+                        <a href="/admin/promociones" class="waves-effect">
+                            <div class="d-inline-block icons-sm"></div>
+                            <span>Lista Planes</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#create-promocion" class="waves-effect">
                             <div class="d-inline-block icons-sm"></div>
                             <span>Crear</span>
                         </a>
