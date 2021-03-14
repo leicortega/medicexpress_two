@@ -860,7 +860,8 @@
         min-height: 60vh;
     }
     .banner_three_home_img {
-        right: -337px;
+        right: -330px;
+        top: -160px;
     }
     .banner_three_top_title{
         top: -40px;

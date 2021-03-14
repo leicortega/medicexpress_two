@@ -1,11 +1,10 @@
-@section('title') Promociones @endsection
+@section('title') Misión y Visión @endsection
 
 @extends('views_admin.layouts.app')
 
 @section('jsMain')
     <script src="{{ asset('assets_admin/js/promociones.js') }}"></script>
 @endsection
-
 @section('content')
 <div class="page-content-wrapper">
     <div class="container-fluid">
@@ -38,7 +37,7 @@
 
                                 <a href="#" class="btn btn-primary btn-lg float-right mb-2" data-toggle="modal" data-target="#create-promocion">Agregar +</a>
 
-                                <table class="table table-centered table-hover table-bordered mb-0">
+                                {{-- <table class="table table-centered table-hover table-bordered mb-0">
                                     <thead>
                                         <tr>
                                             <th colspan="12" class="text-center">
@@ -78,10 +77,10 @@
                                             </tr>
                                         @endforeach
                                     </tbody>
-                                </table>
+                                </table> --}}
                             </div>
 
-                            {{ $promociones->links() }}
+                            {{-- {{ $promociones->links() }} --}}
 
                         </div>
                     </div>
@@ -131,7 +130,7 @@
                                     </div>   
                                 </div>
                                 <div class="form-group row" style="padding: 0 30px;">
-                                    <label for="estado" class="col-sm-2 col-form-label">Estado:</label>
+                                    <label for="estado" class="col-sm-2 col-form-label">Imagen:</label>
                                     <div class="col-sm-10">
                                         <select class="form-control" name="estado" id="estado" required>
                                             <option value="">Seleccione Estado</option>

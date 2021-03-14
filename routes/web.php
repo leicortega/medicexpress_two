@@ -70,6 +70,10 @@ Route::post('/admin/promociones/crear', [App\Http\Controllers\Admin\PromocionesC
 Route::get('/admin/promociones/show/{id}', [App\Http\Controllers\Admin\PromocionesController::class, 'show'])->name('promociones-show');
 Route::post('/admin/promociones/update', [App\Http\Controllers\Admin\PromocionesController::class, 'update'])->name('promociones-update');
 Route::get('/admin/promociones/delete/{id}', [App\Http\Controllers\Admin\PromocionesController::class, 'delete'])->name('promociones-delete');
+// Rutas para informacion principal
+Route::get('/admin/informacion/principal', [App\Http\Controllers\Admin\InformacionController::class, 'index'])->name('informacion-principal');
+Route::post('/admin/informacion/principal/crear', [App\Http\Controllers\Admin\InformacionController::class, 'store'])->name('informacion-store');
+
 
 
 Auth::routes(['register' => false]);

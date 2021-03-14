@@ -30,6 +30,16 @@
 
                     <li class="menu-title">Landing Page</li>
                         <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <div class="d-inline-block icons-sm mr-1"><i class="uim uim-window-grid"></i></div>
+                                <span>Información</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="/admin/informacion/principal">Principal</a></li>
+                                <li><a href="/solicitud-dinero">Misión y Visión</a></li>
+                            </ul>
+                        </li>
+                        <li>
                             <a href="/admin/promociones" class="waves-effect">
                                 <div class="d-inline-block icons-sm mr-1"><i class="uim uim-bookmark"></i></div>
                                 <span>Promociones</span>
@@ -87,6 +97,26 @@
 
                     <li>
                         <a href="#" data-toggle="modal" data-target="#create-promocion" class="waves-effect">
+                            <div class="d-inline-block icons-sm"></div>
+                            <span>Crear</span>
+                        </a>
+                    </li>
+
+                @endif
+
+                @if ( Request::is('/admin/informacion/principal') || Request::is('admin/informacion/principal*') )
+
+                    <li class="menu-title">Principal</li>
+
+                    <li>
+                        <a href="/admin/informacion/principal" class="waves-effect">
+                            <div class="d-inline-block icons-sm"></div>
+                            <span>Lista</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#create-info" class="waves-effect">
                             <div class="d-inline-block icons-sm"></div>
                             <span>Crear</span>
                         </a>

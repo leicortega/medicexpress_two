@@ -5,30 +5,41 @@
 @section('content')
     <!--Banner Three Start-->
     <section class="banner_three">
-        <div class="banner_three_home_img">
-            <img src="{{asset('assets/img/banner/slider3.jpeg')}}" alt="">
-        </div>
-        <div class="banner_three_shape_one"></div>
-        <div class="banner_three_shape_two"></div>
-        <div class="banner_three_shape_three"
-            style="background-image: url({{asset('assets/img/shapes/banner_three_shape_3.png')}})"></div>
-        <div class="banner_three_shape_four"
-            style="background-image: url(assets/images/shapes/banner_three_shape_4.png)"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-5">
-                    <div class="banner_three_content">
-                        <div class="banner_three_top_title">
-                            <h2>Luxury <br> Downtown <br> Apartments</h2>
-                            <p>From as low as $10 per day with limited time offer</p>
+        @foreach ($informacion as $info)
+            {{-- <div class="banner_three_home_img" style="width: 576px; margin: 0 423px 0 0;">
+                
+                {{-- <img src="{{asset('assets/img/banner/slider3.jpeg')}}" alt="" style="width: 100%;"> --}}
+                {{-- <img src="{{ \Storage::url($info->imagen) }}" alt="" style="width: 100%;"> --}}
+            {{-- </div> --}} 
+            <div class="banner_three_shape_one"></div>
+            <div class="banner_three_shape_two"></div>
+            <div class="banner_three_shape_three"
+                style="background-image: url({{asset('assets/img/shapes/banner_three_shape_3.png')}})"></div>
+            <div class="banner_three_shape_four"
+                style="background-image: url(assets/images/shapes/banner_three_shape_4.png)"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5" style="height: 460px; overflow: hidden;">
+                        <div class="banner_three_content">
+                            <div class="banner_three_top_title">
+                                <h2>{{$info->contenido}}</h2>
+                                {{-- <p>From as low as $10 per day with limited time offer</p> --}}
+                            </div>
+                            <div class="product-tab-box tabs-box">
+                            </div>
                         </div>
-                        <div class="product-tab-box tabs-box">
-
+                    </div>
+                    <div class="col-xl-7">
+                        <div class="banner_three_home_img" style="width: 576px; height: 432px; margin: 0 280px 0 0; overflow: hidden;">
+                
+                            {{-- <img src="{{asset('assets/img/banner/slider3.jpeg')}}" alt="" style="width: 100%;"> --}}
+                            <img src="{{ \Storage::url($info->imagen) }}" alt="" style="width: 100%;">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        @endforeach
+        
     </section>
     <!--Banner Three Start-->
     <!--service Start-->
