@@ -36,7 +36,7 @@
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
                                 <li><a href="/admin/informacion/principal">Principal</a></li>
-                                <li><a href="/solicitud-dinero">Misión y Visión</a></li>
+                                <li><a href="/admin/informacion/mision">Misión y Visión</a></li>
                             </ul>
                         </li>
                         <li>
@@ -117,6 +117,25 @@
 
                     <li>
                         <a href="#" data-toggle="modal" data-target="#create-info" class="waves-effect">
+                            <div class="d-inline-block icons-sm"></div>
+                            <span>Crear</span>
+                        </a>
+                    </li>
+
+                @endif
+                @if ( Request::is('/admin/informacion/mision') || Request::is('admin/informacion/mision*') )
+
+                    <li class="menu-title">Misión y Visión</li>
+
+                    <li>
+                        <a href="/admin/informacion/mision" class="waves-effect">
+                            <div class="d-inline-block icons-sm"></div>
+                            <span>Lista</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a  href="#" data-toggle="modal" data-target="#create-about" class="waves-effect">
                             <div class="d-inline-block icons-sm"></div>
                             <span>Crear</span>
                         </a>

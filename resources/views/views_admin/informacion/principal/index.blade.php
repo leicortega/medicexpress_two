@@ -3,7 +3,7 @@
 @extends('views_admin.layouts.app')
 
 @section('jsMain')
-    <script src="{{ asset('assets_admin/js/promociones.js') }}"></script>
+    <script src="{{ asset('assets_admin/js/informacion.js') }}"></script>
 @endsection
 @section('content')
 <div class="page-content-wrapper">
@@ -65,10 +65,10 @@
                                                 <td class="text-center">{{ Carbon\Carbon::parse($info->fecha)->format('d-m-Y') }}</td>
                                                 <td class="text-center">{{$info->estado}}</td>
                                                 <td class="text-center">
-                                                    <button type="button" class="btn btn-outline-secondary btn-sm" onclick="showPlan({{$info->id}})" data-toggle="tooltip" data-placement="top" title="Ver Plan">
+                                                    <button type="button" class="btn btn-outline-secondary btn-sm" onclick="showInfo({{$info->id}})" data-toggle="tooltip" data-placement="top" title="Ver Plan">
                                                         <i class="mdi mdi-eye"></i>
                                                     </button>
-                                                    <a href="javascript:eliminar_plan({{ $info->id }})"><button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Eliminar Plan" style="margin-left: 2px">
+                                                    <a href="javascript:eliminar_info({{ $info->id }})"><button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Eliminar Plan" style="margin-left: 2px">
                                                         <i class="mdi mdi-delete"></i>
                                                     </button></a>
                                                 </td>

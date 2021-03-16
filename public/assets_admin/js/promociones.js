@@ -45,7 +45,7 @@ function showPlan(id, btn){
                         <img src="/storage/${data.imagen}" alt="" class="rounded" style="width: 150px; height: auto; margin: 0 auto;"> 
                     </div>
                     <div class="form-group row" style="padding: 0 30px;">
-                        <label for="estado" class="col-sm-2 col-form-label">Imagen:</label>
+                        <label for="estado" class="col-sm-2 col-form-label">Estado:</label>
                         <div class="col-sm-10">
                             <select class="form-control" name="estado" id="estado" required>
                                 <option value="">Seleccione Estado</option>

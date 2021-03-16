@@ -73,6 +73,15 @@ Route::get('/admin/promociones/delete/{id}', [App\Http\Controllers\Admin\Promoci
 // Rutas para informacion principal
 Route::get('/admin/informacion/principal', [App\Http\Controllers\Admin\InformacionController::class, 'index'])->name('informacion-principal');
 Route::post('/admin/informacion/principal/crear', [App\Http\Controllers\Admin\InformacionController::class, 'store'])->name('informacion-store');
+Route::get('/admin/informacion/principal/show/{id}', [App\Http\Controllers\Admin\InformacionController::class, 'show'])->name('informacion-show');
+Route::post('/admin/informacion/principal/update', [App\Http\Controllers\Admin\InformacionController::class, 'update'])->name('informacion-update');
+Route::get('/admin/informacion/principal/delete/{id}', [App\Http\Controllers\Admin\InformacionController::class, 'delete'])->name('informacion-delete');
+// Rutas para informacion principal mision y vision
+Route::get('/admin/informacion/mision', [App\Http\Controllers\Admin\MisionController::class, 'index'])->name('informacion-mision');
+Route::post('/admin/informacion/mision/create', [App\Http\Controllers\Admin\MisionController::class, 'store'])->name('informacion-mision-store');
+Route::get('/admin/informacion/mision/show/{id}', [App\Http\Controllers\Admin\MisionController::class, 'show'])->name('informacion-mision-show');
+Route::post('/admin/informacion/mision/update', [App\Http\Controllers\Admin\MisionController::class, 'update'])->name('informacion-mision-update');
+Route::get('/admin/informacion/mision/delete/{id}', [App\Http\Controllers\Admin\MisionController::class, 'delete'])->name('informacion-mision-delete');
 
 
 
