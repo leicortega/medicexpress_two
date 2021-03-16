@@ -68,31 +68,30 @@
     <section class="about_page">
         <div class="container">
             <div class="row">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="about_page_left">
-                        <div class="block-title text-left">
-                            <h2>Misión</h2>
-                        </div>
-                        <div class="about_page_right_text">
-                            <p class="second_text">Quisq commodo simply free ornar tortor. Excepteur sint occaecat
-                                sunt in culpa qui officia deserunt mollit anim id est laborum. Claritas est etiam
-                                processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare
-                                quam littera gothica, quam nunc putamus parum claram.</p>
-                        </div>
-                        <ul class="about_page_list list-unstyled">
-                            <li><i class="fa fa-check"></i>Invest in your simply neighborhood</li>
-                            <li><i class="fa fa-check"></i>Support people in free text extreme need</li>
-                            <li><i class="fa fa-check"></i>Largest global industrial business community</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-6">
-                    <div class="about_page_left">
-                        <div class="about_page_img">
-                            <img src="{{asset('assets/img/about/about_page_img_1.jpg')}}" alt="">
+                @foreach ($nosotros_mision as $about)
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="about_page_left">
+                            <div class="block-title text-left">
+                                <h2>Misión</h2>
+                            </div>
+                            <div class="about_page_right_text">
+                                <p class="second_text">{{$about->contenido}}</p>
+                            </div>
+                            {{-- <ul class="about_page_list list-unstyled">
+                                <li><i class="fa fa-check"></i>Invest in your simply neighborhood</li>
+                                <li><i class="fa fa-check"></i>Support people in free text extreme need</li>
+                                <li><i class="fa fa-check"></i>Largest global industrial business community</li>
+                            </ul> --}}
                         </div>
                     </div>
-                </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="about_page_left">
+                            <div class="about_page_img">
+                                <img src="{{\Storage::url($about->imagen)}}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                @endforeach 
             </div>
         </div>
     </section>
@@ -100,31 +99,31 @@
     <section class="about_page">
         <div class="container">
             <div class="row">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="about_page_left">
-                        <div class="about_page_img">
-                            <img src="{{asset('assets/img/about/about_page_img_1.jpg')}}" alt="">
+                @foreach ($nosotros_vision as $about)
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="about_page_left">
+                            <div class="about_page_img">
+                                <img src="{{\Storage::url($about->imagen)}}" alt="">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-6 col-lg-6">
-                    <div class="about_page_right">
-                        <div class="block-title text-left">
-                            <h2>Visión</h2>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="about_page_right">
+                            <div class="block-title text-left">
+                                <h2>Visión</h2>
+                            </div>
+                            <div class="about_page_right_text">
+                                <p class="second_text">{{$about->contenido}}</p>
+                            </div>
+                            {{-- <ul class="about_page_list list-unstyled">
+                                <li><i class="fa fa-check"></i>Invest in your simply neighborhood</li>
+                                <li><i class="fa fa-check"></i>Support people in free text extreme need</li>
+                                <li><i class="fa fa-check"></i>Largest global industrial business community</li>
+                            </ul> --}}
                         </div>
-                        <div class="about_page_right_text">
-                            <p class="second_text">Quisq commodo simply free ornar tortor. Excepteur sint occaecat
-                                sunt in culpa qui officia deserunt mollit anim id est laborum. Claritas est etiam
-                                processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare
-                                quam littera gothica, quam nunc putamus parum claram.</p>
-                        </div>
-                        <ul class="about_page_list list-unstyled">
-                            <li><i class="fa fa-check"></i>Invest in your simply neighborhood</li>
-                            <li><i class="fa fa-check"></i>Support people in free text extreme need</li>
-                            <li><i class="fa fa-check"></i>Largest global industrial business community</li>
-                        </ul>
                     </div>
-                </div>
+                @endforeach
+                
             </div>
         </div>
     </section>

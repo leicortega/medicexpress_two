@@ -16,7 +16,7 @@ class CreateMisionVisionTable extends Migration
         Schema::create('mision_vision', function (Blueprint $table) {
             $table->id();
             $table->string('tipo');
-            $table->string('contenido');
+            $table->text('contenido');
             $table->string('imagen');
             $table->date('fecha');
             $table->string('estado');

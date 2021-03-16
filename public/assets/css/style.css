@@ -5851,6 +5851,9 @@ li {
 .about_page_img {
     position: relative;
     display: block;
+    width: 503px;
+    height: 426px;
+    overflow: hidden;
     /* margin-top: 30px; */
 }
 
