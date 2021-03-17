@@ -5,6 +5,7 @@ use App\Http\Controllers\contactoController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\nosotrosController;
 use App\Http\Controllers\servicosController;
+use App\Http\Controllers\CotizacionController;
 use Illuminate\Support\Facades\Route;
 
 // Controladores Panel Administrador
@@ -83,11 +84,18 @@ Route::get('/admin/informacion/mision/show/{id}', [App\Http\Controllers\Admin\Mi
 Route::post('/admin/informacion/mision/update', [App\Http\Controllers\Admin\MisionController::class, 'update'])->name('informacion-mision-update');
 Route::get('/admin/informacion/mision/delete/{id}', [App\Http\Controllers\Admin\MisionController::class, 'delete'])->name('informacion-mision-delete');
 
-
+// RUTAS PARA COTIZACION
+Route::get('admin/cotizacion', [CotizacionController::class, 'index']);
+Route::post('admin/cotizacion/create', [CotizacionController::class, 'create'])->name('cotizacion.create');
+Route::post('admin/cotizacion/show', [CotizacionController::class, 'show']);
+Route::get('admin/cotizacion/delete/{id}', [CotizacionController::class, 'delete']);
+// RUTAS PARA ITEMS COTIZACION
+Route::post('admin/cotizacion/items/create', [CotizacionController::class, 'create_item'])->name('cotizacion.create.item');
+Route::post('admin/cotizacion/items/show', [CotizacionController::class, 'show_items']);
 
 Auth::routes(['register' => false]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/mail/template', function () { return view('mails.template'); });
 Auth::routes();

@@ -44,7 +44,15 @@
                                 <div class="d-inline-block icons-sm mr-1"><i class="uim uim-bookmark"></i></div>
                                 <span>Promociones</span>
                             </a>
-                            
+
+                        </li>
+
+                        <li>
+                            <a href="/admin/cotizacion" class="waves-effect">
+                                <div class="d-inline-block icons-sm mr-1"><i class="uim uim-bookmark"></i></div>
+                                <span>Cotizacion</span>
+                            </a>
+
                         </li>
                     {{-- @endcanany
 
@@ -142,6 +150,25 @@
                     </li>
 
                 @endif
+                @if ( Request::is('admin/cotizacion') || Request::is('admin/cotizacion/*') )
+
+                    <li class="menu-title">Cotización</li>
+
+                    <li>
+                        <a href="/admin/informacion/mision" class="waves-effect">
+                            <div class="d-inline-block icons-sm"></div>
+                            <span>Lista</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a  href="#" data-toggle="modal" data-target="#create-about" class="waves-effect">
+                            <div class="d-inline-block icons-sm"></div>
+                            <span>Crear</span>
+                        </a>
+                    </li>
+
+                @endif
 
                 @if ( Request::is('admin/users') || Request::is('admin/users/*') )
 
@@ -162,7 +189,7 @@
                     </li>
 
                 @endif
-                            
+
             </ul>
 
         </div>
