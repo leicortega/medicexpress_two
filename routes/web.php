@@ -91,7 +91,10 @@ Route::post('admin/cotizacion/show', [CotizacionController::class, 'show']);
 Route::get('admin/cotizacion/delete/{id}', [CotizacionController::class, 'delete']);
 // RUTAS PARA ITEMS COTIZACION
 Route::post('admin/cotizacion/items/create', [CotizacionController::class, 'create_item'])->name('cotizacion.create.item');
-Route::post('admin/cotizacion/items/show', [CotizacionController::class, 'show_items']);
+Route::post('admin/cotizacion/items/show', [CotizacionController::class, 'show_items'])->name('show.items');
+Route::post('admin/cotizacion/items/item/show/{id}', [CotizacionController::class, 'show_item']);
+Route::post('admin/cotizacion/items/item/update', [CotizacionController::class, 'update_item']);
+Route::get('admin/cotizacion/items/item/delte/{id}', [CotizacionController::class, 'delete_item']);
 
 Auth::routes(['register' => false]);
 

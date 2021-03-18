@@ -174,6 +174,15 @@
         </div>
 
         <!-- The Modal -->
+        <div class="modal fade" id="updateitems-cotizacion" style="z-index: 1051;">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" id="modal-content">        
+
+                </div>
+            </div>
+        </div>
+
+        <!-- The Modal -->
         <div class="modal fade" id="showitems-cotizacion">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">

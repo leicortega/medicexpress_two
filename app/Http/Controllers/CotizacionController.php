@@ -53,6 +53,39 @@ class CotizacionController extends Controller
     public function create_item(Request $request) {
         ServiciosDetalleCotizacion::create($request->all());
 
+        // if ($items->save()) {
+        //     //return dd($items);
+        //     return ['id' => $request['detalle_cotizacion_id']];
+        //     //return redirect()->back()->with(['create' => 1, 'mensaje' => 'El item se creo correctamente']);
+        // } else {
+        //     return redirect()->back()->with(['create' => 0, 'mensaje' => 'El item NO se creo correctamente']);
+        // }
+
         return ['id' => $request['detalle_cotizacion_id']];
+    }
+
+    public function show_item(Request $request){
+        return ServiciosDetalleCotizacion::find($request['id']);
+    }
+
+    public function update_item(Request $request){
+        $item = ServiciosDetalleCotizacion::find($request['id']);
+        $item->update([
+            'nombre' => $request['nombre'],
+            'estado' => $request['estado']
+        ]);
+        if($item->save()){
+            return redirect()->back()->with(['create' => 1, 'mensaje' => 'La información se actualizo correctamente']);
+        }else{
+            return redirect()->back()->with(['create' => 0, 'mensaje' => 'La información no se actualizo correctamente']);
+        }
+    }
+
+    public function delete_item($id){
+        if (ServiciosDetalleCotizacion::find($id)->delete()) {
+            return redirect()->back()->with(['create' => 1, 'mensaje' => 'El item servicio de cotizacion se eliminado correctamente']);
+        } else {
+            return redirect()->back()->with(['create' => 0, 'mensaje' => 'El item servicio de cotizacion NO se eliminado correctamente']);
+        }
     }
 }

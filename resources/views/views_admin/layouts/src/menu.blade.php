@@ -49,7 +49,7 @@
 
                         <li>
                             <a href="/admin/cotizacion" class="waves-effect">
-                                <div class="d-inline-block icons-sm mr-1"><i class="uim uim-bookmark"></i></div>
+                                <div class="d-inline-block icons-sm mr-1"><i class="uim uim-bag"></i></div>
                                 <span>Cotizacion</span>
                             </a>
 

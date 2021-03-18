@@ -53,6 +53,7 @@ function showItemsServicio(id) {
         type: 'POST',
         data: { id:id },
         success: function (data) {
+            console.log(data)
             let html = `
             <a href="#" class="btn btn-primary btn-lg float-right mb-2" data-toggle="modal" data-target="#aggitems-cotizacion" onclick="aggItem(${id})">Agregar +</a>
 
@@ -77,10 +78,10 @@ function showItemsServicio(id) {
                             <th class="text-center">${item.nombre}</th>
                             <td class="text-center">${item.estado == 1 ? 'Activo' : 'Inactivo'}</td>
                             <td class="text-center">
-                                <button type="button" class="btn btn-outline-secondary btn-sm" onclick="showServicio({{$cotizacion->id}})" data-toggle="tooltip" data-placement="top" title="Ediar Servicio">
+                                <button type="button" class="btn btn-outline-secondary btn-sm" onclick="showitem(${item.id})" data-toggle="tooltip" data-placement="top" title="Ediar Servicio">
                                     <i class="fa fa-edit"></i>
                                 </button>
-                                <a href="javascript:eliminarServicio({{ $cotizacion->id }})"><button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Eliminar Servicio" style="margin-left: 2px">
+                                <a href="javascript:deleteItem(${item.id})"><button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Eliminar Servicio" style="margin-left: 2px">
                                     <i class="mdi mdi-delete"></i>
                                 </button></a>
                             </td>
@@ -98,4 +99,63 @@ function showItemsServicio(id) {
 
 function aggItem(id) {
     $('#detalle_cotizacion_id').val(id);
+}
+
+function showitem(id){
+    $.ajax({
+        url: '/admin/cotizacion/items/item/show/'+id,
+        type: 'POST',
+        data: { id:id },
+        success: function (data) {
+            console.log(data)
+            $('#updateitems-cotizacion').modal('show');
+            let contenido = `
+            <div class="modal-header">
+                <h4 class="modal-title">Actualizar items de servicio</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+                <!-- Modal body -->
+                <form action="/admin/cotizacion/items/item/update" id="form_aggitems" method="POST" enctype="multipart/form-data">
+                    <div class="modal-body">
+                            <input type="hidden" name="_token" value="${$('meta[name="csrf-token"]').attr('content')}">
+                            <input type="hidden" name="id" value="${data.id}">
+                            <div class="form-group row" style="padding: 0 30px;">
+                                <label for="nombre" class="col-sm-2 col-form-label">Titulo:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" value="${data.nombre}" class="form-control" name="nombre" id="nombre_item" autocomplete="off" required>
+                                </div>
+                            </div>
+                            <div class="form-group row" style="padding: 0 30px;">
+                                <label for="estado" class="col-sm-2 col-form-label">Estado:</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" name="estado" id="estado_item" required>
+                                    <option value="">Seleccione Estado</option>
+                                    <option value="1"${data.estado == '1' ? 'selected' : ''}>Activo</option>
+                                    <option value="0"${data.estado == '0' ? 'selected' : ''}>Inactivo</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <input type="hidden" name="detalle_cotizacion_id" id="detalle_cotizacion_id">
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            `;
+            $('#modal-content').html(contenido);
+            // $('#nombre_item').val(data.nombre);
+            // $('#id').val(data.id);
+            // $("#estado_item option[value='"+ data.estado +"']").attr("selected", true);
+            // $('#aggitems-cotizacion').modal('show');
+        }
+    });
+}
+function deleteItem(id){
+    if(confirm('Desea eliminar este item?')){
+        window.location.href = '/admin/cotizacion/items/item/delte/'+id;
+    }
 }
