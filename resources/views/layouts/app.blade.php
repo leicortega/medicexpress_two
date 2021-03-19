@@ -20,344 +20,355 @@
         <link rel="stylesheet" href="{{asset('assets/css/swiper.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/bootstrap-select.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/jarallax.css')}}">
-    
+
         <link rel="stylesheet" href="{{asset('assets/css/jquery.mCustomScrollbar.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/bootstrap-datepicker.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/vegas.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/nouislider.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/nouislider.pips.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/tolips.css')}}">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         <!-- Template styles -->
         <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
-        
-    
+
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
     </head>
 <body>
- <div class="page-wrapper">
-    <div class="preloader">
-        <img src="{{asset('assets/img/logo/logo.svg')}}" class="preloader__image" alt="">
-    </div><!-- /.preloader -->
-    <!-- ===============header ===================-->
-    <div class="site-header__header-one-wrap clearfix">
-        <!-- header-top-->
-        <div class="header_top_one">
-            <div class="container">
-                <div class="header_top_one_inner clearfix">
-                    <div class="header_top_one_logo_box float-left">
-                        <div class="header_top_one_logo">
-                            <a href="#"><img src="{{asset('assets/img/logo/logo.svg')}}" alt="" style="width: 200px"></a>
+    <div class="page-wrapper">
+        <div class="preloader">
+            <img src="{{asset('assets/img/logo/logo.svg')}}" class="preloader__image" alt="">
+        </div><!-- /.preloader -->
+        <!-- ===============header ===================-->
+        <div class="site-header__header-one-wrap clearfix">
+            <!-- header-top-->
+            <div class="header_top_one">
+                <div class="container">
+                    <div class="header_top_one_inner clearfix">
+                        <div class="header_top_one_logo_box float-left">
+                            <div class="header_top_one_logo">
+                                <a href="#"><img src="{{asset('assets/img/logo/logo.svg')}}" alt="" style="width: 200px"></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="header_top_one_content_box float-right">
-                        <!-- <div class="header_top_one_content_box_top clearfix">
-                            <div class="header_top_one_content_box_top_left float-left">
-                                <p>Bienvenido a Medicexpress</p>
-                            </div>
-                            <div class="header_top_one_content_box_top_right float-right">
-                                <ul class="list-unstyled header_top_one_content_box_top_right_list">
-                                    <li><a href="#">Soporte<span>/</span></a></li>
-                                    <li><a href="#">Lista de deseos<span>/</span></a></li>
-                                    <li><a href="#">Mi cuenta</a></li>
-                                </ul>
-                            </div>
-                        </div> -->
-                        <div class="header_top_one_content_box_bottom">
-                            <div class="header_top_one_content_box_bottom_inner clearfix">
-                                <!--<div class="header_top_one_content_box_bottom__social_box">
-                                    <div class="header_top_one_content_box_bottom__social">
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-facebook-square"></i></a>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                    </div> -->
+                        <div class="header_top_one_content_box float-right">
+                            <!-- <div class="header_top_one_content_box_top clearfix">
+                                <div class="header_top_one_content_box_top_left float-left">
+                                    <p>Bienvenido a Medicexpress</p>
                                 </div>
-                                <div class="header_top_one_content_box_bottom_contact_info">
-                                    <ul class="header_top_one_content_box_bottom_contact_info_list list-unstyled">
-                                        <li>
-                                            <div class="icon">
-                                                <span class="icon-phone-call"></span>
-                                            </div>
-                                            <div class="text">
-                                                <p>Telefono</p>
-                                                <a href="tel:+593 969 665 037">+593 969 665 037</a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <span class="icon-message"></span>
-                                            </div>
-                                            <div class="text">
-                                                <p>Correo</p>
-                                                <a href="mailto:servicioalcliente@medicexpress.com">servicioalcliente@medicexpress.com</a>
-                                            </div>
-                                        </li>
+                                <div class="header_top_one_content_box_top_right float-right">
+                                    <ul class="list-unstyled header_top_one_content_box_top_right_list">
+                                        <li><a href="#">Soporte<span>/</span></a></li>
+                                        <li><a href="#">Lista de deseos<span>/</span></a></li>
+                                        <li><a href="#">Mi cuenta</a></li>
                                     </ul>
                                 </div>
+                            </div> -->
+                            <div class="header_top_one_content_box_bottom">
+                                <div class="header_top_one_content_box_bottom_inner clearfix">
+                                    <!--<div class="header_top_one_content_box_bottom__social_box">
+                                        <div class="header_top_one_content_box_bottom__social">
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                            <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </div> -->
+                                    </div>
+                                    <div class="header_top_one_content_box_bottom_contact_info">
+                                        <ul class="header_top_one_content_box_bottom_contact_info_list list-unstyled">
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="icon-phone-call"></span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Telefono</p>
+                                                    <a href="tel:+593 969 665 037">+593 969 665 037</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="icon-message"></span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Correo</p>
+                                                    <a href="mailto:servicioalcliente@medicexpress.com">servicioalcliente@medicexpress.com</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- /header-top-->
+            <header class="main-nav__header-one">
+                <div class="container">
+                    <nav class="header-navigation one stricky">
+                        <div class="container-box clearfix">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="main-nav__left main-nav__left_one float-left">
+                                <a href="#" class="side-menu__toggler">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                                <div class="main-nav__main-navigation one clearfix">
+                                    <ul class=" main-nav__navigation-box float-left">
+                                        <li>
+                                            <a href="{{ route('index') }}" class="{{request()->routeIs('index') ? 'enlace' : ''}}">Inicio</a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="{{ route('nosotros.index')}}" class="{{request()->routeIs('nosotros.index') ? 'enlace' : ''}}">Quienes somos</a>
+                                            <ul>
+                                                <li><a href="{{ route('nosotros.index')}}" >Misión</a></li>
+                                                <li><a href="{{ route('nosotros.index')}}" >Visión</a></li>
+                                                <li><a href="{{ route('nosotros.index')}}" >Objetivos y principios</a></li>
+                                                <li><a href="{{ route('nosotros.index')}}" >Valores</a></li>
+                                            </ul><!-- /.sub-menu -->
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="{{route('servicios.index')}}" class="{{request()->routeIs('servicios.index') ? 'enlace' : ''}}">Servicios</a>
+                                            <ul>
+                                                <li><a href="{{route('servicios.index')}}">Atención medica</a></li>
+                                                <li><a href="{{route('servicios.index')}}">Salud ocupacional</a></li>
+                                                <li><a href="{{route('servicios.index')}}">Consultorias</a></li>
+                                            </ul><!-- /.sub-menu -->
+                                        </li>
+                                        <li>
+                                            <a href="{{route('blog.index')}}" class="{{request()->routeIs('blog.index') ? 'enlace' : ''}}">Blog</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="{{route('contacto')}}" class="{{request()->routeIs('contacto') ? 'enlace' : ''}}">Contactenos</a>
+                                        </li>
+                                        {{-- <li>
+                                            <a href="{{route('admin')}}" target="_blank" >Admin</a>
+                                        </li> --}}
+                                    </ul>
+                                </div><!-- /.navbar-collapse -->
+                            </div>
+                            <div class="main-nav__right main-nav__right_one float-right">
+                                <div class="header_btn_1">
+                                    <a href="{{route('contacto')}}" class="thm-btn" data-toggle="modal" data-target="#cotizar">Cotizar Ahora</a>
+                                </div>
+                                <!--<div class="icon_cart_box">
+                                    <a href="#">
+                                        <span class="icon-shopping-cart"></span>
+                                    </a>
+                                </div>
+                                <div class="icon_search_box">
+                                    <a href="#" class="main-nav__search search-popup__toggler">
+                                        <i class="icon-magnifying-glass"></i>
+                                    </a>
+                                </div>-->
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
         </div>
-        <!-- /header-top-->
-        <header class="main-nav__header-one">
+
+        <!--modal cotizar-->
+        <div class="container">
+            {{-- <h2>Modal Example</h2>
+            <!-- Button to Open the Modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cotizar">
+            Open modal
+            </button> --}}
+
+            <!-- The Modal -->
+            <div class="modal fade" id="cotizar" style="margin-top: 16vh;">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        {{-- <div class="modal-header">
+                            <h4 class="modal-title">Realizar Cotización</h4>
+
+                        </div> --}}
+
+                        <!-- Modal body -->
+                        <div class="modal-body pt-5">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <div class="block-title text-center">
+                                <h2>Selecciona los sevicios a cotizar</h2>
+                            </div>
+
+                            <div id="content_servicios">
+
+
+
+                            </div>
+                        </div>
+
+                        <!-- Modal footer -->
+                        {{-- <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        </div> --}}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--modal cotizar end-->
+
+
+        @yield('content')
+
+        <!--Brand One Start-->
+        <div class="brand_one">
             <div class="container">
-                <nav class="header-navigation one stricky">
-                    <div class="container-box clearfix">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="main-nav__left main-nav__left_one float-left">
-                            <a href="#" class="side-menu__toggler">
-                                <i class="fa fa-bars"></i>
-                            </a>
-                            <div class="main-nav__main-navigation one clearfix">
-                                <ul class=" main-nav__navigation-box float-left">
-                                    <li>
-                                        <a href="{{ route('index') }}" class="{{request()->routeIs('index') ? 'enlace' : ''}}">Inicio</a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="{{ route('nosotros.index')}}" class="{{request()->routeIs('nosotros.index') ? 'enlace' : ''}}">Quienes somos</a>
-                                        <ul>
-                                            <li><a href="{{ route('nosotros.index')}}" >Misión</a></li>
-                                            <li><a href="{{ route('nosotros.index')}}" >Visión</a></li>
-                                            <li><a href="{{ route('nosotros.index')}}" >Objetivos y principios</a></li>
-                                            <li><a href="{{ route('nosotros.index')}}" >Valores</a></li>
-                                        </ul><!-- /.sub-menu -->
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="{{route('servicios.index')}}" class="{{request()->routeIs('servicios.index') ? 'enlace' : ''}}">Servicios</a>
-                                        <ul>
-                                            <li><a href="{{route('servicios.index')}}">Atención medica</a></li>
-                                            <li><a href="{{route('servicios.index')}}">Salud ocupacional</a></li>
-                                            <li><a href="{{route('servicios.index')}}">Consultorias</a></li>
-                                        </ul><!-- /.sub-menu -->
-                                    </li>
-                                    <li>
-                                        <a href="{{route('blog.index')}}" class="{{request()->routeIs('blog.index') ? 'enlace' : ''}}">Blog</a>
-                                    </li>
-                                   
-                                    <li>
-                                        <a href="{{route('contacto')}}" class="{{request()->routeIs('contacto') ? 'enlace' : ''}}">Contactenos</a>
-                                    </li>
-                                    {{-- <li>
-                                        <a href="{{route('admin')}}" target="_blank" >Admin</a>
-                                    </li> --}}
+                <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 100, "slidesPerView": 5, "autoplay": { "delay": 5000 }, "breakpoints": {
+                "0": {
+                    "spaceBetween": 30,
+                    "slidesPerView": 2
+                },
+                "375": {
+                    "spaceBetween": 30,
+                    "slidesPerView": 2
+                },
+                "575": {
+                    "spaceBetween": 30,
+                    "slidesPerView": 3
+                },
+                "767": {
+                    "spaceBetween": 50,
+                    "slidesPerView": 4
+                },
+                "991": {
+                    "spaceBetween": 50,
+                    "slidesPerView": 5
+                },
+                "1199": {
+                    "spaceBetween": 100,
+                    "slidesPerView": 5
+                }
+            }}'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="{{asset('assets/img/brand/brand_1_img_1.png')}}" alt="">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="{{asset('assets/img/brand/brand_1_img_2.png')}}" alt="">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="{{asset('assets/img/brand/brand_1_img_3.png')}}" alt="">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="{{asset('assets/img/brand/brand_1_img_4.png')}}" alt="">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="{{asset('assets/img/brand/brand_1_img_5.png')}}" alt="">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="{{asset('assets/img/brand/brand_1_img_1.png')}}" alt="">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="{{asset('assets/img/brand/brand_1_img_2.png')}}" alt="">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="{{asset('assets/img/brand/brand_1_img_3.png')}}" alt="">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="{{asset('assets/img/brand/brand_1_img_4.png')}}" alt="">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="{{asset('assets/img/brand/brand_1_img_5.png')}}" alt="">
+                        </div><!-- /.swiper-slide -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Brand One End-->
+        <!--Site Footer One Start-->
+        <footer class="site_footer">
+            <div class="container">
+                <div class="site_footer_one_top">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-6 wow fadeInUp" data-wow-delay="00ms">
+                            <div class="footer-widget__column footer_widget__about">
+                                <div class="footer_logo">
+                                    <a href="#"><img src="{{asset('assets/img/logo/logo.svg')}}" alt="" style=" width: 225px;"></a>
+                                </div>
+                                <div class="footer_widget_about_text">
+                                    <p>Forjando juntos una intervención efectiva, eficiente y eficaz al
+                                        compromiso de mejorar la calidad de vida y siguiendo las normativas vigentes
+                                        establecidas a nivel Nacional.</p>
+                                </div>
+                                <div class="footer_call_agent_box">
+                                    <div class="icon">
+                                        <span class="icon-phone-call"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p>Telefono</p>
+                                        <a href="tel:+593 969 665 037">+593 969 665 037</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="200ms">
+                            <div class="footer-widget__column footer_widget__explore clearfix">
+                                <div class="footer-widget__title">
+                                    <h3>Explorar</h3>
+                                </div>
+                                <ul class="footer_widget__explore_list list-unstyled">
+                                    <li><a href="{{route('nosotros.index')}}">Sobre nosotros</a></li>
+                                    <li><a href="{{route('servicios.index')}}">Servicios</a></li>
+                                    <li><a href="{{route('blog.index')}}">Blog</a></li>
+                                    <li><a href="{{route('contacto')}}">Contácto</a></li>
+                                    <li><a href="{{route('admin')}}" target="_blank">Admin</a></li>
                                 </ul>
-                            </div><!-- /.navbar-collapse -->
-                        </div>
-                        <div class="main-nav__right main-nav__right_one float-right">
-                            <div class="header_btn_1">
-                                <a href="{{route('contacto')}}" class="thm-btn" data-toggle="modal" data-target="#cotizar">Cotizar Ahora</a>
+                                <!--<ul class="footer_widget__explore_list two list-unstyled">
+                                    <li><a href="#">Our Agents</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                </ul>-->
                             </div>
-                            <!--<div class="icon_cart_box">
-                                <a href="#">
-                                    <span class="icon-shopping-cart"></span>
-                                </a>
-                            </div>
-                            <div class="icon_search_box">
-                                <a href="#" class="main-nav__search search-popup__toggler">
-                                    <i class="icon-magnifying-glass"></i>
-                                </a>
-                            </div>-->
                         </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
-    </div>
-
-    <!--modal cotizar-->
-    <div class="container">
-        {{-- <h2>Modal Example</h2>
-        <!-- Button to Open the Modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cotizar">
-          Open modal
-        </button> --}}
-      
-        <!-- The Modal -->
-        <div class="modal fade" id="cotizar" style="margin-top: 16vh;">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">Realizar Cotización</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        Modal body..
-                    </div>
-                    
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-                    </div>
-                    
+                        <div class="col-xl-5 col-lg-8 wow fadeInUp" data-wow-delay="300ms">
+                            <div class="footer-widget__column footer_widget__newsletter">
+                                <div class="footer-widget__title">
+                                    <h3>Boletin informativo</h3>
+                                </div>
+                                <form action="#" class="footer_form">
+                                    <div class="footer_input_box">
+                                        <input type="email" name="email" placeholder="Correo electronico">
+                                        <button type="submit" class="button" style="font-size: 14px">Suscribirse</button>
+                                    </div>
+                                </form>
+                                <div class="footer_widget__newsletter_bottom">
+                                    <p>Urdenor 1 MZ 139 EDIF. Citrino Ofc305</p>
+                                    <a href="mailto:servicioalcliente@medicexpress.com">servicioalcliente@medicexpress.com</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    <!--modal cotizar end-->
-    
-
-    @yield('content')
-    
-    <!--Brand One Start-->
-    <div class="brand_one">
-        <div class="container">
-            <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 100, "slidesPerView": 5, "autoplay": { "delay": 5000 }, "breakpoints": {
-            "0": {
-                "spaceBetween": 30,
-                "slidesPerView": 2
-            },
-            "375": {
-                "spaceBetween": 30,
-                "slidesPerView": 2
-            },
-            "575": {
-                "spaceBetween": 30,
-                "slidesPerView": 3
-            },
-            "767": {
-                "spaceBetween": 50,
-                "slidesPerView": 4
-            },
-            "991": {
-                "spaceBetween": 50,
-                "slidesPerView": 5
-            },
-            "1199": {
-                "spaceBetween": 100,
-                "slidesPerView": 5
-            }
-        }}'>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_1.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_2.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_3.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_4.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_5.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_1.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_2.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_3.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_4.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="{{asset('assets/img/brand/brand_1_img_5.png')}}" alt="">
-                    </div><!-- /.swiper-slide -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Brand One End-->
-    <!--Site Footer One Start-->
-    <footer class="site_footer">
-        <div class="container">
-            <div class="site_footer_one_top">
+        </footer>
+        <!--Site Footer One End-->
+        <!--Site Footer Bottom Start-->
+        <div class="site_footer_bottom">
+            <div class="container">
                 <div class="row">
-                    <div class="col-xl-3 col-lg-6 wow fadeInUp" data-wow-delay="00ms">
-                        <div class="footer-widget__column footer_widget__about">
-                            <div class="footer_logo">
-                                <a href="#"><img src="{{asset('assets/img/logo/logo.svg')}}" alt="" style=" width: 225px;"></a>
+                    <div class="col-xl-12">
+                        <div class="site_footer_inner">
+                            <div class="site_footer_left">
+                                <p>© Copyright 2021 by <a href="{{route('index')}}">medicexpress</a></p>
                             </div>
-                            <div class="footer_widget_about_text">
-                                <p>Forjando juntos una intervención efectiva, eficiente y eficaz al 
-                                    compromiso de mejorar la calidad de vida y siguiendo las normativas vigentes 
-                                    establecidas a nivel Nacional.</p>
-                            </div>
-                            <div class="footer_call_agent_box">
-                                <div class="icon">
-                                    <span class="icon-phone-call"></span>
-                                </div>
-                                <div class="text">
-                                    <p>Telefono</p>
-                                    <a href="tel:+593 969 665 037">+593 969 665 037</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="footer-widget__column footer_widget__explore clearfix">
-                            <div class="footer-widget__title">
-                                <h3>Explorar</h3>
-                            </div>
-                            <ul class="footer_widget__explore_list list-unstyled">
-                                <li><a href="{{route('nosotros.index')}}">Sobre nosotros</a></li>
-                                <li><a href="{{route('servicios.index')}}">Servicios</a></li>
-                                <li><a href="{{route('blog.index')}}">Blog</a></li>
-                                <li><a href="{{route('contacto')}}">Contácto</a></li>
-                                <li><a href="{{route('admin')}}" target="_blank">Admin</a></li>
-                            </ul>
-                            <!--<ul class="footer_widget__explore_list two list-unstyled">
-                                <li><a href="#">Our Agents</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Blog</a></li>
-                            </ul>-->
-                        </div>
-                    </div>
-                    <div class="col-xl-5 col-lg-8 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="footer-widget__column footer_widget__newsletter">
-                            <div class="footer-widget__title">
-                                <h3>Boletin informativo</h3>
-                            </div>
-                            <form action="#" class="footer_form">
-                                <div class="footer_input_box">
-                                    <input type="email" name="email" placeholder="Correo electronico">
-                                    <button type="submit" class="button" style="font-size: 14px">Suscribirse</button>
-                                </div>
-                            </form>
-                            <div class="footer_widget__newsletter_bottom">
-                                <p>Urdenor 1 MZ 139 EDIF. Citrino Ofc305</p>
-                                <a href="mailto:servicioalcliente@medicexpress.com">servicioalcliente@medicexpress.com</a>
+                            <div class="site_footer__social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
-    <!--Site Footer One End-->
-    <!--Site Footer Bottom Start-->
-    <div class="site_footer_bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="site_footer_inner">
-                        <div class="site_footer_left">
-                            <p>© Copyright 2021 by <a href="{{route('index')}}">medicexpress</a></p>
-                        </div>
-                        <div class="site_footer__social">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-facebook-square"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!--Site Footer Bottom End-->
     </div>
-    <!--Site Footer Bottom End-->
-</div>   
     <!--==================whatsapp====================-->
     <div class="btn-whatsapp scroll-to-target">
         <a href="https://api.whatsapp.com/send?phone=+593 969 665 037" target="_blank">
@@ -424,8 +435,10 @@
     <script src="{{asset('assets/js/appear.js')}}"></script>
     <script src="{{asset('assets/js/jarallax.js')}}"></script>
     <script src="http://maps.google.com/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <!-- template scripts -->
     <script src="{{asset('assets/js/theme.js')}}"></script>
+    <script src="{{asset('assets/js/index.js')}}"></script>
 </body>
 </html>
