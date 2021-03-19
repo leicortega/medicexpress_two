@@ -88,4 +88,8 @@ class CotizacionController extends Controller
             return redirect()->back()->with(['create' => 0, 'mensaje' => 'El item servicio de cotizacion NO se eliminado correctamente']);
         }
     }
+
+    public function show_services() {
+        return DetalleCotizacion::with('servicios')->get();
+    }
 }

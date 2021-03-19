@@ -96,6 +96,8 @@ Route::post('admin/cotizacion/items/item/show/{id}', [CotizacionController::clas
 Route::post('admin/cotizacion/items/item/update', [CotizacionController::class, 'update_item']);
 Route::get('admin/cotizacion/items/item/delte/{id}', [CotizacionController::class, 'delete_item']);
 
+Route::post('/show/services', [CotizacionController::class, 'show_services']);
+
 Auth::routes(['register' => false]);
 
 // Route::get('/home', 'HomeController@index')->name('home');

@@ -20,8 +20,7 @@ class DetalleCotizacion extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function servicios(): HasMany
-    {
+    public function servicios() {
         return $this->hasMany(ServiciosDetalleCotizacion::class, 'detalle_cotizacion_id', 'id');
     }
 }
