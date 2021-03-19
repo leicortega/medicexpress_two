@@ -10,6 +10,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
             rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        {{-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> --}}
         <!-- Css-->
         <link rel="stylesheet" href="{{asset('assets/css/animate.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
@@ -176,7 +178,7 @@
             </button> --}}
 
             <!-- The Modal -->
-            <div class="modal fade" id="cotizar" style="margin-top: 16vh;">
+            <div class="modal fade" id="cotizar" style="margin-top: 10vh;">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
 
@@ -187,13 +189,13 @@
                         </div> --}}
 
                         <!-- Modal body -->
-                        <div class="modal-body pt-5">
+                        <div class="modal-body pt-5" style="padding-top: 1rem !important">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <div class="block-title text-center">
+                            <div class="block-title text-center" style="padding: 2rem 5rem;">
                                 <h2>Selecciona los sevicios a cotizar</h2>
                             </div>
 
-                            <div id="content_servicios">
+                            <div id="content_servicios" style="padding: 2rem 4rem;">
 
 
 

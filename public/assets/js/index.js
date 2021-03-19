@@ -4,19 +4,20 @@ $(document).ready(function(){
             url: '/show/services',
             type: 'POST',
             success: function (data) {
+                console.log(data)
                 let html = `<form>`;
                             data.forEach((element, key) => {
                                 html += `
                                 <div class="form-row">
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-6" style="font-size: 1.5rem;">
                                         <input class="form-check-input" type="checkbox" id="servicio_${key}" name="servicio_${key}" onchange="habilitar_servicio(this)">
                                         <label class="form-check-label" for="gridCheck1">
                                             ${element.nombre}
                                         </label>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <select class="js-example-basic-multiple w-100 disabled" id="detalle_servicio_${key}" name="detalle_servicio_${key}[]" multiple="multiple">
-                                            <option value="AL">Alabama</option>
+                                        <select class="js-example-basic-multiple js-states form-control w-100 disabled" id="detalle_servicio_${key}" name="detalle_servicio_${key}[]" multiple="multiple">
+                                            <option value="">Seleccione servicios</option>
                                             <option value="AL">Alabama</option>
                                             <option value="AL">Alabama</option>
                                             <option value="AL">Alabama</option>
@@ -26,7 +27,7 @@ $(document).ready(function(){
                                 </div>`;
                             });
 
-                html += `<button type="submit" class="btn btn-primary">Sign in</button>
+                html += `<button type="submit" class="btn btn-primary" style="width: 60%; margin: 0 20%;">Cotizar</button>
                             </form>`;
 
                 $('#content_servicios').html(html);
