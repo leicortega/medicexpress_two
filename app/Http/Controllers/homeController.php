@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DetalleCotizacion;
 use App\Models\Informacion;
 use Illuminate\Http\Request;
 use App\Models\Post;
@@ -19,6 +20,5 @@ class homeController extends Controller
             $post['author'] = User::find($post->users_id)->name;
         }
         return view('index', ['posts' => $posts, 'promociones' => $promociones, 'informacion' => $informacion]);
-    
     }
 }
