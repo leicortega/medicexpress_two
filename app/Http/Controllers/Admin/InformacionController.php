@@ -83,4 +83,9 @@ class InformacionController extends Controller
             return redirect()->back()->with(['create' => 0, 'mensaje' => 'La información no se elimino correctamente']);
         }
     }
+
+    // datos de la empresa
+    public function show_datos(){
+        return view('views_admin.informacion.principal.datos');
+    }
 }

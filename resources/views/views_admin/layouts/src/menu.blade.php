@@ -129,6 +129,13 @@
                             <span>Crear</span>
                         </a>
                     </li>
+                    <li class="menu-title">Datos</li>
+                    <li>
+                        <a href="/admin/informacion/principal/datos" class="waves-effect">
+                            <div class="d-inline-block icons-sm"></div>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
 
                 @endif
                 @if ( Request::is('/admin/informacion/mision') || Request::is('admin/informacion/mision*') )

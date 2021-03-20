@@ -10,18 +10,20 @@ $(document).ready(function(){
                                 html += `
                                 <div class="form-row">
                                     <div class="form-group col-md-6" style="font-size: 1.5rem;">
-                                        <input class="form-check-input" type="checkbox" id="servicio_${key}" name="servicio_${key}" onchange="habilitar_servicio(this)">
-                                        <label class="form-check-label" for="gridCheck1">
+                                        <input class="form-check-input" type="checkbox" id="servicio_${key}" name="servicio_${key}" onchange="habilitar_servicio(this)" style="width: 20px; height: 20px;">
+                                        <label class="form-check-label" for="gridCheck1" style="margin-left: 15px;">
                                             ${element.nombre}
                                         </label>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <select class="js-example-basic-multiple js-states form-control w-100 disabled" id="detalle_servicio_${key}" name="detalle_servicio_${key}[]" multiple="multiple">
-                                            <option value="">Seleccione servicios</option>
-                                            <option value="AL">Alabama</option>
-                                            <option value="AL">Alabama</option>
-                                            <option value="AL">Alabama</option>
-                                            <option value="WY">Wyoming</option>
+                                        <select class="js-select2 form-control w-100 disabled" id="detalle_servicio_${key}" name="detalle_servicio_${key}[]" multiple="multiple">
+                                    `;
+                                    element.servicios.forEach((item, key) => {
+                                        html += `
+                                        <option value="${item.id}">${item.nombre}</option>
+                                        `;
+                                    });
+                                    html += `  
                                         </select>
                                     </div>
                                 </div>`;

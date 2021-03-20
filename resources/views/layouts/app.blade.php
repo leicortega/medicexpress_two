@@ -29,6 +29,7 @@
         <link rel="stylesheet" href="{{asset('assets/css/nouislider.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/nouislider.pips.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/tolips.css')}}">
+        {{-- <link rel="stylesheet" href="{{asset('assets/js/plugins/select2/css/select2.min.css')}}"> --}}
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         <!-- Template styles -->
         <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
@@ -437,6 +438,7 @@
     <script src="{{asset('assets/js/appear.js')}}"></script>
     <script src="{{asset('assets/js/jarallax.js')}}"></script>
     <script src="http://maps.google.com/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM"></script>
+    {{-- <script src="{{asset('assets/js/plugins/select2/js/select2.full.min.js')}}"></script> --}}
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <!-- template scripts -->
