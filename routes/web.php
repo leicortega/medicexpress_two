@@ -85,7 +85,8 @@ Route::post('/admin/informacion/mision/update', [App\Http\Controllers\Admin\Misi
 Route::get('/admin/informacion/mision/delete/{id}', [App\Http\Controllers\Admin\MisionController::class, 'delete'])->name('informacion-mision-delete');
 //datos de la empresa
 Route::get('/admin/informacion/principal/datos', [App\Http\Controllers\Admin\InformacionController::class, 'show_datos'])->name('show.datos');
-
+Route::post('/admin/informacion/principal/datos/create', [App\Http\Controllers\Admin\InformacionController::class, 'datos_create'])->name('create.datos');
+Route::get('/admin/informacion/principal/datos/show/{id}', [App\Http\Controllers\Admin\InformacionController::class, 'show_datos_id'])->name('show.datos.id');
 // RUTAS PARA COTIZACION
 Route::get('admin/cotizacion', [CotizacionController::class, 'index']);
 Route::post('admin/cotizacion/create', [CotizacionController::class, 'create'])->name('cotizacion.create');

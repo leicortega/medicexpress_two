@@ -42,65 +42,66 @@
                             </div>
                         </div>
                         <!-- mostrar datos de la empresa -->
-                        <div class="form-inline" style="margin-bottom: 2rem;">
-                            <div class="col-xl-6">
-                                <div class="row">
-                                    <div class="col-lg-2">
-                                        <label for="" >Telefono:</label>
+                        <div class="content">
+                            <div class="form-inline" style="margin-bottom: 2rem;">
+                                <div class="col-xl-6">
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <label for="" >Telefono:</label>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <input type="text" class="form-control" value="+59 {{$datos[0]->telefono}}" style="width: 100%;" disabled>
+                                        </div>   
+                                    </div>                    
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <label for="">Correo:</label>
+                                        </div>
+                                        <div class="col-lg-10">
+                                            <input type="email" class="form-control" value="{{$datos[0]->correo}}" style="width: 100%;" disabled>
+                                        </div>  
                                     </div>
-                                    <div class="col-lg-7">
-                                        <input type="text" class="form-control" value="+593 969 665 037" style="width: 100%;" disabled>
-                                    </div>   
-                                </div>                    
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="row">
-                                    <div class="col-lg-2">
-                                        <label for="">Correo:</label>
-                                    </div>
-                                    <div class="col-lg-10">
-                                        <input type="email" class="form-control" value="servicioalcliente@medicexpress.com" style="width: 100%;" disabled>
-                                    </div>  
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-inline" style="margin-bottom: 2rem;">
+                            <div class="form-inline" style="margin-bottom: 2rem;">
+                                <div class="col-xl-12">
+                                    <div class="col-lg-2" style="padding: 0 7px;">
+                                        <label for="" style="display: block;">Redes Sociales:</label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fab fa-facebook-f"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" value="{{$datos[0]->facebook}}" style="width: 100%; margin-right: 5px;" disabled>
+                                            </div>                                    
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fab fa-instagram"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" value="{{$datos[0]->instagram}}" style="width: 100%; margin-right: 5px;" disabled>
+                                            </div>                                      
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fab fa-twitter"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" value="{{$datos[0]->twitter}}" style="width: 100%; margin-right: 5px;" disabled>
+                                            </div> 
+                                        </div>    
+                                    </div>                    
+                                </div>
+                            </div> 
                             <div class="col-xl-12">
-                                <div class="col-lg-2" style="padding: 0 7px;">
-                                    <label for="" style="display: block;">Redes Sociales:</label>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fab fa-facebook-f"></i></span>
-                                            </div>
-                                            <input type="text" class="form-control" value="redes sociales" style="width: 100%; margin-right: 5px;" disabled>
-                                        </div>                                    
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fab fa-instagram"></i></span>
-                                            </div>
-                                            <input type="text" class="form-control" value="redes sociales" style="width: 100%; margin-right: 5px;" disabled>
-                                        </div>                                      
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fab fa-twitter"></i></span>
-                                            </div>
-                                            <input type="text" class="form-control" value="redes sociales" style="width: 100%; margin-right: 5px;" disabled>
-                                        </div> 
-                                    </div>    
-                                </div>                    
+                                <a href="#" class="btn btn-primary btn-lg" onclick="show_datos({{$datos[0]->id}})">Actualizar Datos</a>
                             </div>
                         </div>
-                        <div class="col-xl-12">
-                            <a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#cotizar">Actualizar Datos</a>
-                        </div>
-                        
                     </div>
                 </div>
             </div>
@@ -119,23 +120,41 @@
                     </div>
             
                     <!-- Modal body -->
-                    <form action="{{route('informacion-store')}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{route('create.datos')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="modal-body">
                             
                                 <div class="form-group row" style="padding: 0 30px;">
-                                    <label for="contenido" class="col-sm-2 col-form-label">contenido:</label>
+                                    <label for="telefono" class="col-sm-2 col-form-label">Telefono:</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="contenido" id="contenido" autocomplete="off" required>
+                                        <input type="number" class="form-control" name="telefono" id="telefono" autocomplete="off" required>
                                     </div>   
                                 </div>
                                 <div class="form-group row" style="padding: 0 30px;">
-                                    <label for="imagen" class="col-sm-2 col-form-label">Imagen:</label>
+                                    <label for="correo" class="col-sm-2 col-form-label">correo:</label>
                                     <div class="col-sm-10">
-                                        <input type="file" class="form-control" name="imagen" id="imagen" accept="image/*" required>
+                                        <input type="email" class="form-control"  name="correo" id="correo" autocomplete="off" required>
                                     </div>   
                                 </div>
                                 <div class="form-group row" style="padding: 0 30px;">
+                                    <label for="facebook" class="col-sm-2 col-form-label">link facebook:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control"  name="facebook" id="facebook" autocomplete="off">
+                                    </div>   
+                                </div>
+                                <div class="form-group row" style="padding: 0 30px;">
+                                    <label for="instagram" class="col-sm-2 col-form-label">link instagram:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control"  name="instagram" id="instagram" autocomplete="off">
+                                    </div>   
+                                </div>
+                                <div class="form-group row" style="padding: 0 30px;">
+                                    <label for="twitter" class="col-sm-2 col-form-label">link twitter:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control"  name="twitter" id="twitter" autocomplete="off">
+                                    </div>   
+                                </div>
+                                {{-- <div class="form-group row" style="padding: 0 30px;">
                                     <label for="estado" class="col-sm-2 col-form-label">Estado:</label>
                                     <div class="col-sm-10">
                                         <select class="form-control" name="estado" id="estado" required>
@@ -144,7 +163,7 @@
                                             <option value="inactivo">Inactivo</option>
                                         </select>
                                     </div>   
-                                </div>
+                                </div> --}}
                             
                         </div>
                 
@@ -154,6 +173,14 @@
                             <button type="submit" class="btn btn-primary">Guardar</button>
                         </div>
                     </form>
+            
+                </div>
+            </div>
+        </div>
+        <!-- The Modal update -->
+        <div class="modal fade" id="update-info">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" id="modal-content">
             
                 </div>
             </div>

@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Mail\ContactanosMailable;
+use App\Models\datos_info;
 use Illuminate\Support\Facades\Mail;
 
 class contactoController extends Controller
 {
     public function contacto(){
-        return view('contacto');
+        $datos = datos_info::latest()->take(1)->get();
+        return view('contacto', ['datos' => $datos]);
     }
 
     public function store(Request $request){
