@@ -84,7 +84,7 @@
                                                 </div>
                                                 <div class="text">
                                                     <p>Telefono</p>
-                                                    <a href="tel:+59 {{$datos[0]->telefono}}">+59 {{$datos[0]->telefono}}</a>
+                                                    <a href="tel:+593 969 665 037">+59                                                    <a href="tel:+59 {{$datos[0]->telefono}}">+59 {{$datos[0]->telefono}}</a>
                                                 </div>
                                             </li>
                                             <li>
@@ -197,8 +197,6 @@
                             </div>
 
                             <div id="content_servicios" style="padding: 2rem 4rem;">
-
-
 
                             </div>
                         </div>

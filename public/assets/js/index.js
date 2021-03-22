@@ -33,6 +33,8 @@ $(document).ready(function(){
                             </form>`;
 
                 $('#content_servicios').html(html);
+
+                $('.js-select2').select2();
             }
         })
     });
