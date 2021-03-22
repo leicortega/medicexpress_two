@@ -84,7 +84,7 @@
                                                 </div>
                                                 <div class="text">
                                                     <p>Telefono</p>
-                                                    <a href="tel:+593 969 665 037">+593 969 665 037</a>
+                                                    <a href="tel:+59 {{$datos[0]->telefono}}">+59 {{$datos[0]->telefono}}</a>
                                                 </div>
                                             </li>
                                             <li>
@@ -93,7 +93,7 @@
                                                 </div>
                                                 <div class="text">
                                                     <p>Correo</p>
-                                                    <a href="mailto:servicioalcliente@medicexpress.com">servicioalcliente@medicexpress.com</a>
+                                                    <a href="mailto:{{$datos[0]->correo}}">{{$datos[0]->correo}}</a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -303,7 +303,7 @@
                                     </div>
                                     <div class="text">
                                         <p>Telefono</p>
-                                        <a href="tel:+593 969 665 037">+593 969 665 037</a>
+                                        <a href="tel:+59 {{$datos[0]->telefono}}">+59 {{$datos[0]->telefono}}</a>
                                     </div>
 
                                 </div>
@@ -342,7 +342,7 @@
                                 </form>
                                 <div class="footer_widget__newsletter_bottom">
                                     <p>Urdenor 1 MZ 139 EDIF. Citrino Ofc305</p>
-                                    <a href="mailto:servicioalcliente@medicexpress.com">servicioalcliente@medicexpress.com</a>
+                                    <a href="mailto:{{$datos[0]->correo}}">{{$datos[0]->correo}}</a>
                                 </div>
                             </div>
                         </div>
@@ -361,9 +361,9 @@
                                 <p>© Copyright 2021 by <a href="{{route('index')}}">medicexpress</a></p>
                             </div>
                             <div class="site_footer__social">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-facebook-square"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="{{$datos[0]->twitter}}" target="blank"><i class="fab fa-twitter"></i></a>
+                                <a href="{{$datos[0]->facebook}}" target="blank"><i class="fab fa-facebook-square"></i></a>
+                                <a href="{{$datos[0]->instagram}}" target="blank"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -397,19 +397,19 @@
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="icon-message"></i>
-                    <a href="mailto:servicioalcliente@medicexpress.com">servicio al cliente</a>
+                    <a href="mailto:{{$datos[0]->correo}}">servicio al cliente</a>
                 </li>
                 <li>
                     <i class="icon-phone-call"></i>
-                    <a href="tel:+593 969 665 037">+593 969 665 037</a>
+                    <a href="tel:+59 {{$datos[0]->telefono}}">+59 {{$datos[0]->telefono}}</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
             <div class="mobile-nav__top">
                 <div class="mobile-nav__social">
-                    <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="facebook"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#" aria-label="pinterest"><i class="fab fa-pinterest-p"></i></a>
-                    <a href="#" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="{{$datos[0]->twitter}}" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="{{$datos[0]->facebook}}" aria-label="facebook"><i class="fab fa-facebook-square"></i></a>
+                    {{-- <a href="{{$datos[0]->telefono}}" aria-label="pinterest"><i class="fab fa-pinterest-p"></i></a> --}}
+                    <a href="{{$datos[0]->instagram}}" aria-label="instagram"><i class="fab fa-instagram"></i></a>
                 </div><!-- /.mobile-nav__social -->
             </div><!-- /.mobile-nav__top -->
         </div>

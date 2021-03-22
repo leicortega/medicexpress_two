@@ -126,3 +126,70 @@ function eliminar_about(id) {
         window.location.href = '/admin/informacion/mision/delete/'+id;
     }
 }
+
+
+// mostrar datos de la empresa
+function show_datos(id){
+    $.ajax({
+        url: '/admin/informacion/principal/datos/show/'+id,
+        type: 'get',
+        success: function(data){
+            console.log(data)
+            $('#update-info').modal('show');
+            let contenido = `
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Actualizar Contenido</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                <!-- Modal body -->
+                <form action="/admin/informacion/principal/datos/create" method="POST" enctype="multipart/form-data">
+                    <div class="modal-body">
+                            <input type="hidden" name="_token" value="${$('meta[name="csrf-token"]').attr('content')}">
+                            <input type="hidden" name="id" value="${data.id}">  
+                        
+                            <div class="form-group row" style="padding: 0 30px;">
+                                <label for="telefono" class="col-sm-2 col-form-label">Telefono:</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" value="${data.telefono}" name="telefono" id="telefono" autocomplete="off" required>
+                                </div>   
+                            </div>
+                            <div class="form-group row" style="padding: 0 30px;">
+                                <label for="correo" class="col-sm-2 col-form-label">correo:</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" value="${data.correo}"  name="correo" id="correo" autocomplete="off" required>
+                                </div>   
+                            </div>
+                            <div class="form-group row" style="padding: 0 30px;">
+                                <label for="facebook" class="col-sm-2 col-form-label">link facebook:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" value="${data.facebook}"  name="facebook" id="facebook" autocomplete="off">
+                                </div>   
+                            </div>
+                            <div class="form-group row" style="padding: 0 30px;">
+                                <label for="instagram" class="col-sm-2 col-form-label">link instagram:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" value="${data.instagram}"  name="instagram" id="instagram" autocomplete="off">
+                                </div>   
+                            </div>
+                            <div class="form-group row" style="padding: 0 30px;">
+                                <label for="twitter" class="col-sm-2 col-form-label">link twitter:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" value="${data.twitter}"  name="twitter" id="twitter" autocomplete="off">
+                                </div>   
+                            </div>
+                    </div>
+            
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            `;
+            $('#modal-content').html(contenido);
+        }
+    });
+}
+

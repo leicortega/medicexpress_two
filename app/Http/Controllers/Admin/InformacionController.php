@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\datos_info;
 use App\Models\Informacion;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -85,7 +86,32 @@ class InformacionController extends Controller
     }
 
     // datos de la empresa
-    public function show_datos(){
-        return view('views_admin.informacion.principal.datos');
+    public function show_datos(Request $request){
+        $datos = datos_info::latest()->take(1)->get();
+        return view('views_admin.informacion.principal.datos', ['datos' => $datos]);
+    }
+
+    public function datos_create(Request $request){
+        if($request['id']){
+            $datos = datos_info::find($request['id']);
+            if ($datos->update($request->all())) {
+                return redirect()->back()->with(['create' => 1, 'mensaje' => 'Datos actualizados correctamente']);
+            } else {
+                return redirect()->back()->with(['create' => 0, 'mensaje' => 'Datos no se actualizarón correctamente']);
+            }
+        }
+
+        $datos = datos_info::create($request->all());
+
+        if ($datos->save()) {
+            return redirect()->back()->with(['create' => 1, 'mensaje' => 'Datos creados correctamente']);
+        } else {
+            return redirect()->back()->with(['create' => 0, 'mensaje' => 'Datos no se crearón correctamente']);
+        }
+        
+    }
+
+    public function show_datos_id(Request $request){
+        return datos_info::find($request['id']);
     }
 }

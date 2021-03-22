@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Media_post;
 use App\Models\Comment;
+use App\Models\datos_info;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
@@ -24,13 +25,14 @@ class blogController extends Controller
 
     public function index(){
         $posts = Post::paginate(9);
+        $datos = datos_info::latest()->take(1)->get();
 
         foreach ($posts as $key => $post) {
             $post['author'] = User::find($post->users_id)->name;
             $post['comments'] = Comment::where('posts_id', $post->id)->count();
         }
 
-        return view('blog.index', ['posts' => $posts]);
+        return view('blog.index', ['posts' => $posts, 'datos' => $datos]);
     }
 
     public function vistas(Post $post, Comment $comment, Request $request){
