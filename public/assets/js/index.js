@@ -23,7 +23,7 @@ $(document).ready(function(){
                                         <option value="${item.id}">${item.nombre}</option>
                                         `;
                                     });
-                                    html += `  
+                                    html += `
                                         </select>
                                     </div>
                                 </div>`;
@@ -37,7 +37,7 @@ $(document).ready(function(){
         })
     });
 
-    $('.js-example-basic-multiple').select2();
+    $('.js-select2').select2();
 
     $('#agregar').change(function () {
         if($(this).prop('checked') == true) {

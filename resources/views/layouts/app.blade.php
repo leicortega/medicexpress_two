@@ -429,7 +429,7 @@
     <script src="{{asset('assets/js/typed-2.0.11.js')}}"></script>
     <script src="{{asset('assets/js/vegas.min.js')}}"></script>
     <script src="{{asset('assets/js/jquery.validate.min.js')}}"></script>
-    <script src="{{asset('assets/js/bootstrap-select.min.js')}}"></script>
+    {{-- <script src="{{asset('assets/js/bootstrap-select.min.js')}}"></script> --}}
     <script src="{{asset('assets/js/countdown.min.js')}}"></script>
     <script src="{{asset('assets/js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
     <script src="{{asset('assets/js/bootstrap-datepicker.min.js')}}"></script>
